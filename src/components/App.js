@@ -1,8 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 
 function App() {
-  return ();
+  return (
+    <p>En construction !</p>
+  );
 }
 
 export default App;
