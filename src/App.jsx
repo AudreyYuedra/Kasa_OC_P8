@@ -12,7 +12,7 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <div>
+    <div className="center">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

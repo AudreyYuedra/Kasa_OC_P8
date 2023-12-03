@@ -2,11 +2,12 @@
 
 
 footer {
-    width: 1440px;
+    width: 100%;
     height: 210px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     background-color: $bg-color-footer;
     color: $general-color;
     & .logo-white {
@@ -14,8 +15,14 @@ footer {
         height: 40px;
         margin-top: 50px;
     }
-    & .rigths {
+    & .rights {
         font-size: $second;
         margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 1441px) {
+    footer {
+        width: 1440px;
     }
 }
