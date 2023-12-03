@@ -1,0 +1,21 @@
+@import "_variables.scss";
+
+
+footer {
+    width: 1440px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $bg-color-footer;
+    color: $general-color;
+    & .logo-white {
+        width: 122px;
+        height: 40px;
+        margin-top: 50px;
+    }
+    & .rigths {
+        font-size: $second;
+        margin-bottom: 25px;
+    }
+}
