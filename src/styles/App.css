@@ -106,15 +106,16 @@ footer .rights {
      object-fit: cover;
 }
 
-/*.gallery {
-width: 80%;
-padding: 10px;
-border: solid 2px purple;
-& .card {
-    border: solid 2px blue;
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: 340px;
-    grid-gap: 15px;
+.gallery {
+  max-width: 1240px;
+  padding: 10px;
+  border: solid 2px purple;
 }
-}*//*# sourceMappingURL=App.css.map */
+.gallery .card {
+  border: solid 2px blue;
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  height: 340px;
+  border-radius: 25px;
+}/*# sourceMappingURL=App.css.map */

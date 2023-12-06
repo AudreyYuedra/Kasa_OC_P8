@@ -12,23 +12,23 @@ function Gallery() {
   // comportements
   useEffect(() => {
     axios
-      .get(HousingDatas) //appel API (ici ficher local)
+      .get(HousingDatas) //appel API (ici fichier local)
       .then((response) => setData(response.data)) //requete json pour récup donnée + instancier avec data
       .catch((error) => {
         console.error("Error fetchong data: ", error);
       });
   }, []); //crochet vide => pas de modif ultérieur
 
-  //affichage (render)
   return (
     <div className="gallery">
       {/* boucle avec map*/}
-      {data.map((logement) => (
-        <div key={logement.id} className="card">
-          {/* carte individuelle */}
-          <Link to={logement.id}>
-            <img src={logement.cover} alt={logement.title} />
-            <p>{logement.title}</p>
+      {data.map((HousingDatas) => (
+        <div key={HousingDatas.id} className="card">
+          <Link to={`/Logement/${HousingDatas.id}`}>
+            <img imageUrl={HousingDatas.cover} alt={HousingDatas.title} />
+            <div className="bg-title">
+              <p>{HousingDatas.title}</p>
+            </div>
           </Link>
         </div>
       ))}
