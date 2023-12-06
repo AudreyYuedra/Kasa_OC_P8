@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
-
 import logo_kasa_color from "../assets/logo_kasa_color.png";
-
-import "../styles/Header.css";
+import { Link } from "react-router-dom";
+import "../styles/App.css";
 
 function Header() {
   return (

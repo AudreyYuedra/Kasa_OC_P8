@@ -1,12 +1,14 @@
 import Banner from "../components/Banner";
-import Container from "../components/Container";
+import Banner_Home from "../assets/paysage_banner_home.png";
+import Gallery from "../components/Gallery";
+import "../styles/App.css";
 
 function Home() {
   return (
-    <div>
-      <Banner />
-      <Container />
-    </div>
+    <main>
+      <Banner imageUrl={Banner_Home} text={"Chez vous, partout et ailleurs"} />
+      <Gallery />
+    </main>
   );
 }
 

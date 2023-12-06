@@ -1,6 +1,6 @@
 import logo_kasa_white from "../assets/logo_kasa_white.png";
 
-import "../styles/Footer.css";
+import "../styles/App.css";
 
 function Footer() {
   return (
