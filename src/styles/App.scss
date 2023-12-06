@@ -60,7 +60,7 @@ header {
     }
 }
 
-/////////////////// FOOTER - check
+/////////////////// FOOTER - prob end
 footer {
     width: 100%;
     height: 210px;
@@ -103,7 +103,7 @@ footer {
     }
 }
 
-/// ////////////////// GALLERY
+/// ////////////////// GALLERY - no show
 .gallery {
     max-width: 1240px;
     padding: 10px;
@@ -126,5 +126,32 @@ footer {
 
 
 
-///////////////////// ERROR
+///////////////////// ERROR - prob subline link
+.error {
+    @include column;
+    @include center;
+    color: $primary-color;
+    padding: 15px;
+    .nb-error {
+        font-size: $error;
+        //margin-bottom: 25px;
+    }
+    .txt-error {
+        font-size: $title;
+        margin-bottom: 50px;
+    }
+    .redirection {
+        color: $primary-color;
+        font-size: $general;
+        margin-bottom: 25px;
+        &:visited {
+            color: $primary-color;
+            text-decoration: $primary-color; //ne marche pas
+        }
+    }
+}
+
+
+
+
 
