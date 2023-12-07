@@ -24,6 +24,10 @@ main {
   border: solid 2px green;
   width: 90%;
   max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -53,6 +57,9 @@ header nav {
 }
 header nav .links {
   text-decoration-line: none;
+}
+header nav .links:hover {
+  cursor: pointer;
 }
 header nav .links:active {
   border-bottom: solid 2px #FF6060;
@@ -118,6 +125,70 @@ footer .rights {
   width: 30%;
   height: 340px;
   border-radius: 25px;
+}
+.gallery .card:hover {
+  cursor: pointer;
+}
+
+.about {
+  border: solid 2px blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1024px;
+}
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.collapse .title-collapse {
+  height: 55px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 15px;
+  font-size: 24px;
+  color: #FFFFFF;
+  background-color: #FF6060;
+}
+.collapse .title-collapse:hover {
+  cursor: pointer;
+}
+.collapse .title-collapse .arrow-collapse {
+  width: 35px;
+  height: 20px;
+}
+.collapse .title-collapse .arrow-collapse .arrow-up {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(0);
+}
+.collapse .title-collapse .arrow-collapse .arrow-down {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-180deg);
+}
+.collapse .txt-collapse {
+  font-size: 18px;
+  color: #FF6060;
+  background-color: #FEFEFE;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px;
+  transition: max-height 0.5s ease-in;
+}
+.collapse .txt-collapse .txt-open {
+  margin-top: -10px;
+  max-height: 400px;
+}
+.collapse .txt-collapse .txt-close {
+  max-height: 0;
+  margin-top: -10px;
+  transition: max-height 0.5s ease-out;
 }
 
 .error {

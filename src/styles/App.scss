@@ -25,6 +25,7 @@ main {
     border: solid 2px green;
     width: 90%;
     max-width: 1240px;
+    @include column-center;
 }
 
 ///////////////// HEADER  - check
@@ -49,6 +50,9 @@ header {
         background-color: black;
         & .links{
             text-decoration-line: none;
+            &:hover {
+                cursor: pointer;
+            }
             &:active {
                 //pas fini
                 border-bottom: solid 2px $primary-color;
@@ -115,11 +119,67 @@ footer {
         width: 30%;
         height: 340px;
         border-radius: 25px;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
 ///////////////////// ABOUT
+.about {
+    border: solid 2px blue;
+    @include column-center;
+    width: 80%;
+    max-width: 1024px;
+}
 
+.collapse {
+    @include column;
+    margin-bottom: 25px;
+    & .title-collapse {
+        height: 55px;
+        border-radius: 5px;
+        @include space-between-row;
+        align-items: center;
+        padding: 10px 20px 10px 15px;
+        font-size: $second;
+        color: $general-color;
+        background-color: $primary-color;
+        &:hover {
+            cursor: pointer;
+        }
+        & .arrow-collapse {
+            width: 35px;
+            height: 20px;
+            & .arrow-up {
+                transition: transform 0.3s ease-in-out;
+                transform: rotate(0);
+            }
+            & .arrow-down {
+                transition: transform 0.3s ease-in-out;
+                transform: rotate(-180deg);
+            }
+        }
+    }
+    & .txt-collapse {
+        font-size: $general;
+        color: $primary-color;
+        background-color: $bg-container;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 20px;
+        transition: max-height 0.5s ease-in;
+        & .txt-open {
+            margin-top: -10px;
+            max-height: 400px;
+        }
+        & .txt-close {
+            max-height: 0;
+            margin-top: -10px;
+            transition: max-height 0.5s ease-out;
+        }
+    }
+}
 
 
 ///////////////////// LOGEMENTS
@@ -150,8 +210,3 @@ footer {
         }
     }
 }
-
-
-
-
-
