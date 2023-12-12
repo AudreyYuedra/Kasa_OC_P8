@@ -6,9 +6,9 @@ import "../styles/App.css";
 function Gallery() {
   return (
     <div className="gallery">
-      {HousingDatas.map((data, index) => (
-        <Link to={`/Logement/${HousingDatas.id}`}>
-          <Card key={index} cover={data.cover} title={data.title} />
+      {HousingDatas.map((data) => (
+        <Link key={data.id} to={`/Logement/${data.id}`}>
+          <Card cover={data.cover} title={data.title} />
         </Link>
       ))}
     </div>
