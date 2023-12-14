@@ -213,6 +213,12 @@ footer .rights {
   transition: max-height 0.5s ease-out;
 }
 
+.carousel {
+  width: 100%;
+  max-width: 1240px;
+  height: 415px;
+}
+
 .error {
   display: flex;
   flex-direction: column;
