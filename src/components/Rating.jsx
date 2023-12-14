@@ -4,7 +4,8 @@ function Rating({ rating }) {
   //générer étoile par rapport rating
   for (let i = 1; i <= 5; i++) {
     //choisi css par rapport rating
-    const starClass = i <= rating ? "star-full" : "star-empty"; // true 1ère value et false 2nd valeur
+    const starClass =
+      i <= rating ? "fa-solid fa-star" : "fa-solid fa-star star-inactive"; // true 1ère value et false 2nd valeur
     //ajout étoile avec class correspondante selon boucle et tableau
     stars.push(<i key={i} className={starClass}></i>);
   }

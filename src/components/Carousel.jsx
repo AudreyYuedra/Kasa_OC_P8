@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Arrow_Right from "../assets/arrow_right.png";
+import Arrow_Left from "../assets/arrow_left.png";
 
 function Carousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,13 +21,31 @@ function Carousel({ images }) {
     <div className="carousel">
       {images.length > 1 && (
         <>
-          <button onClick={goToPrevious}>&lt;</button>
-          <button onClick={goToNext}>&gt;</button>
+          <div className="container-arrows">
+            <img
+              src={Arrow_Left}
+              alt="flèche gauche"
+              className="arrow"
+              onClick={goToPrevious}
+            />
+            <img
+              src={Arrow_Right}
+              alt="flèche droite"
+              className="arrow"
+              onClick={goToNext}
+            />
+          </div>
         </>
       )}
       <div className="slide">
-        <img src={images[currentIndex]} alt={`slide ${currentIndex}`} />
-        {images.length > 1 && <p>{`${currentIndex + 1} /${images.length}`}</p>}
+        <img
+          src={images[currentIndex]}
+          alt={`slide ${currentIndex}`}
+          className="img-slide"
+        />
+        {images.length > 1 && (
+          <p className="img-count">{`${currentIndex + 1} /${images.length}`}</p>
+        )}
       </div>
     </div>
   );

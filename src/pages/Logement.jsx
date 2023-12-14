@@ -20,22 +20,30 @@ function Logement() {
   return (
     <main>
       <Carousel images={jsonHousing.pictures} />
-      <div className="container-infos">
+
+      <div className="container-housing">
         <div className="main-infos">
-          <div className="container-titles">
-            <h2>{jsonHousing.title}</h2>
-            <p className="location-infos">{jsonHousing.location}</p>
+          <div className="container-infos">
+            <h2 className="housing-title">{jsonHousing.title}</h2>
+            <p className="location">{jsonHousing.location}</p>
+
+            <div className="container-tags">
+              {jsonHousing.tags.map((tag, index) => (
+                <Tags key={index} content={tag} />
+              ))}
+            </div>
           </div>
-          <div className="container-tags">
-            {jsonHousing.tags.map((tag, index) => (
-              <Tags key={index} content={tag} />
-            ))}
-          </div>
+
           <div className="aside-infos">
             <div className="container-host">
-              <p>{jsonHousing.name}</p>
-              <img src={jsonHousing.picture} alt={jsonHousing.name} />
+              <p className="host-name">{jsonHousing.name}</p>
+              <img
+                src={jsonHousing.picture}
+                alt={jsonHousing.name}
+                className="host-photo"
+              />
             </div>
+
             <Rating />
           </div>
         </div>
