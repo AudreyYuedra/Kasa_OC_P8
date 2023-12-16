@@ -5,7 +5,7 @@ import "../styles/App.css";
 
 function Home() {
   return (
-    <main>
+    <main className="main-home">
       <Banner imageUrl={Banner_Home} text={"Chez vous, partout et ailleurs"} />
       <Gallery />
     </main>

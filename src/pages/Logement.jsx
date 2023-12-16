@@ -5,6 +5,8 @@ import Rating from "../components/Rating.jsx";
 import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../components/Collapse.jsx";
 
+import "../styles/App.css";
+
 function Logement() {
   //récupère param url id
   const { id } = useParams();

@@ -19,13 +19,7 @@ body {
         @include column;
         @include center;
         border: solid 2px black;
-}}
-
-main {
-    border: solid 2px green;
-    width: 90%;
-    max-width: 1240px;
-    @include column-center;
+    }
 }
 
 ///////////////// HEADER  - check
@@ -54,8 +48,12 @@ header {
                 cursor: pointer;
             }
             &:active {
+                color: $primary-color;
+                text-decoration: underline;
+                text-underline-offset: -35px;
+                text-decoration-thickness: 2px;
                 //pas fini
-                border-bottom: solid 2px $primary-color;
+                //text-decoration-line: solid 2px $primary-color;
             }
             &:visited {
                 color: $primary-color;
@@ -84,28 +82,46 @@ footer {
     }
 }
 
-/// //////////////// BANNER - check
-.banner {
+////////////// PAGE HOME
+/////////////////////// BANNER - check
+.main-home {
+    border: solid 2px green;
+    width: 90%;
     max-width: 1240px;
-    height: 224px;
-    @include center;
-    margin-bottom: 50px;
-    border: solid 2px red;
-    & h1 {
-        font-size: $banner;
-        position: absolute;
-        background-color: bisque;
-        z-index: 1;
-        }
-    & img {
-        border-radius: 25px;
-        position: relative;
-        height: 100%;
+    @include column-center;
+    .banner {
         width: 100%;
         max-width: 1240px;
-        object-fit: cover;
+        height: 224px;
+        @include center;
+        margin-bottom: 50px;
+        border: solid 2px red;
+        & h1 {
+            font-size: $banner;
+            position: absolute;
+            background-color: bisque;
+            z-index: 2;
+            }
+        & .opacity {
+            width: 100%;
+            max-width: 1240px;
+            height: 224px;
+            position: absolute;
+            z-index: 1;
+            background-color: $bg-color-second;
+            opacity: 0.2;
+        }
+        & img {
+            border-radius: 25px;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            max-width: 1240px;
+            object-fit: cover;
+        }
     }
 }
+
 
 /// ////////////////// GALLERY - no show
 .gallery {

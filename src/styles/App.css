@@ -20,16 +20,6 @@ body .center {
   border: solid 2px black;
 }
 
-main {
-  border: solid 2px green;
-  width: 90%;
-  max-width: 1240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 header {
   width: 90%;
   max-width: 1240px;
@@ -62,7 +52,10 @@ header nav .links:hover {
   cursor: pointer;
 }
 header nav .links:active {
-  border-bottom: solid 2px #FF6060;
+  color: #FF6060;
+  text-decoration: underline;
+  text-underline-offset: -35px;
+  text-decoration-thickness: 2px;
 }
 header nav .links:visited {
   color: #FF6060;
@@ -88,7 +81,17 @@ footer .rights {
   margin-bottom: 25px;
 }
 
-.banner {
+.main-home {
+  border: solid 2px green;
+  width: 90%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-home .banner {
+  width: 100%;
   max-width: 1240px;
   height: 224px;
   display: flex;
@@ -97,13 +100,22 @@ footer .rights {
   margin-bottom: 50px;
   border: solid 2px red;
 }
-.banner h1 {
+.main-home .banner h1 {
   font-size: 48px;
   position: absolute;
   background-color: bisque;
-  z-index: 1;
+  z-index: 2;
 }
-.banner img {
+.main-home .banner .opacity {
+  width: 100%;
+  max-width: 1240px;
+  height: 224px;
+  position: absolute;
+  z-index: 1;
+  background-color: #000000;
+  opacity: 0.2;
+}
+.main-home .banner img {
   border-radius: 25px;
   position: relative;
   height: 100%;
