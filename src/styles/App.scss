@@ -2,7 +2,7 @@
 @import "_mixins.scss";
 
 
-/////////////////////// APP - check
+////////// APP - check //////////
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +22,8 @@ body {
     }
 }
 
-///////////////// HEADER  - check
+
+////////// HEADER //////////
 header {
     width: 90%;
     max-width: 1240px;
@@ -62,7 +63,8 @@ header {
     }
 }
 
-/////////////////// FOOTER - prob end
+
+////////// FOOTER -check //////////
 footer {
     width: 100%;
     height: 210px;
@@ -82,48 +84,52 @@ footer {
     }
 }
 
-////////////// PAGE HOME
-/////////////////////// BANNER - check
+
+////////// BANNER - check //////////
+.banner {
+    width: 100%;
+    max-width: 1240px;
+    height: 224px;
+    @include center;
+    margin-bottom: 50px;
+    & h1 {
+        font-size: $banner;
+        position: absolute;
+        z-index: 2;
+        }
+    & .opacity {
+        width: 100%;
+        max-width: 1240px;
+        height: 224px;
+        position: absolute;
+        z-index: 1;
+        border-radius: $round;
+        background-color: $bg-color-second;
+        opacity: 0.2;
+    }
+    & img {
+        border-radius: $round;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        max-width: 1240px;
+        object-fit: cover;
+    }
+}
+
+
+//
+
 .main-home {
     border: solid 2px green;
     width: 90%;
     max-width: 1240px;
     @include column-center;
-    .banner {
-        width: 100%;
-        max-width: 1240px;
-        height: 224px;
-        @include center;
-        margin-bottom: 50px;
-        border: solid 2px red;
-        & h1 {
-            font-size: $banner;
-            position: absolute;
-            background-color: bisque;
-            z-index: 2;
-            }
-        & .opacity {
-            width: 100%;
-            max-width: 1240px;
-            height: 224px;
-            position: absolute;
-            z-index: 1;
-            background-color: $bg-color-second;
-            opacity: 0.2;
-        }
-        & img {
-            border-radius: 25px;
-            position: relative;
-            height: 100%;
-            width: 100%;
-            max-width: 1240px;
-            object-fit: cover;
-        }
-    }
+    
 }
 
 
-/// ////////////////// GALLERY - no show
+/// ////////////////// GALLERY 
 .gallery {
     max-width: 1240px;
     padding: 25px;
@@ -162,58 +168,65 @@ footer {
     }
 }
 
-///////////////////// ABOUT
-.about {
-    border: solid 2px blue;
+////////// COLLAPSE //////////
+
+/*** collapse page About ***/
+.main-about {
+    width: 90%;
+    max-width: 1240px;
+    @include column-center;
+}
+/*** fin ***/
+
+.container-collapse {
     @include column-center;
     width: 80%;
     max-width: 1024px;
-}
-
-.collapse {
-    @include column;
-    margin-bottom: 25px;
-    & .title-collapse {
-        height: 55px;
-        border-radius: 5px;
-        @include space-between-row;
-        align-items: center;
-        padding: 10px 20px 10px 15px;
-        font-size: $second;
-        color: $general-color;
-        background-color: $primary-color;
-        &:hover {
+    & .collapse {
+        @include column;
+        margin-bottom: 50px;
+        & .title-collapse {
+            height: 55px;
+            border-radius: 5px;
+            @include space-between-row;
+            align-items: center;
+            padding: 10px 20px 10px 15px;
+            font-size: $second;
+            color: $general-color;
+            background-color: $primary-color;
             cursor: pointer;
-        }
-        & .arrow-collapse {
-            width: 35px;
-            height: 20px;
-            & .arrow-up {
-                transition: transform 0.3s ease-in-out;
-                transform: rotate(0);
+            & .arrow-collapse {
+                width: 35px;
+                height: 20px;
+                & .arrow-up {
+                    transition: transform 0.3s ease-in-out;
+                    transform: rotate(0);
+                }
+                & .arrow-down {
+                    transition: transform 0.3s ease-in-out;
+                    transform: rotate(-180deg);
+                }
             }
-            & .arrow-down {
-                transition: transform 0.3s ease-in-out;
-                transform: rotate(-180deg);
+        }
+        & .txt-collapse {
+            font-size: $general;
+            color: $primary-color;
+            background-color: $bg-container;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 20px;
+            //transition: max-height 0.5s ease-in;
+            & .txt-open {
+                visibility: visible;
+                //margin-top: -10px;
+                //max-height: 400px;
             }
-        }
-    }
-    & .txt-collapse {
-        font-size: $general;
-        color: $primary-color;
-        background-color: $bg-container;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        padding: 20px;
-        transition: max-height 0.5s ease-in;
-        & .txt-open {
-            margin-top: -10px;
-            max-height: 400px;
-        }
-        & .txt-close {
-            max-height: 0;
-            margin-top: -10px;
-            transition: max-height 0.5s ease-out;
+            & .txt-close {
+                visibility: collapse;
+                //max-height: 0;
+                //margin-top: -10px;
+                //transition: max-height 0.5s ease-out;
+            }
         }
     }
 }

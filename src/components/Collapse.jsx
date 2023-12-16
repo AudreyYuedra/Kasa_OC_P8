@@ -3,30 +3,27 @@ import Arrow_Collapse from "../assets/arrow_collapse.png";
 import "../styles/App.css";
 
 function Collapse({ title, content }) {
-  const [open, setOpen] = useState(false); //état de base du collapse fermé
+  const [close, setClose] = useState(true); //état de base du collapse => fermé
 
-  //comportement
-  //* ouvrir ou fermer collapse au clic sur flèche + rotation flèche
+  //* ouvrir ou fermer collapse au clic
   const toggleCollapse = () => {
-    setOpen(!open);
-    console.log(open);
+    setClose(!close); // donc false => ouvert
+    console.log(close);
   };
 
-  //render
   return (
     <div className="collapse">
-      <div className="title-collapse">
+      <div className="title-collapse" onClick={toggleCollapse}>
         <p>{title}</p>
         <img
-          onClick={toggleCollapse}
           src={Arrow_Collapse}
           alt="flèche ouvrante et fermante"
-          className={`arrow-collapse ${open ? "arrow-up" : "arrow-down"}`} // true 1ère value et false 2ns valeur
+          className={`arrow-collapse ${close ? "arrow-up" : "arrow-down"}`} // 1ère value => true ; 2nd value => false
         />
       </div>
-      <p className={`txt-collapse ${open ? "txt-close" : "txt-open"}`}>
-        {content}
-      </p>
+      <div className={close ? "txt-close" : "txt-open"}>
+        <p className="txt-collapse">{content}</p>
+      </div>
     </div>
   );
 }

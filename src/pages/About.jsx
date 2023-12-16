@@ -6,9 +6,9 @@ import "../styles/App.css";
 
 function About() {
   return (
-    <main>
+    <main className="main-about">
       <Banner imageUrl={Banner_About} />
-      <div className="about">
+      <div className="container-collapse">
         {AboutDatas.map((data, index) => (
           <Collapse key={index} title={data.title} content={data.description} />
         ))}

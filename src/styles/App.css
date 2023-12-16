@@ -81,6 +81,40 @@ footer .rights {
   margin-bottom: 25px;
 }
 
+.banner {
+  width: 100%;
+  max-width: 1240px;
+  height: 224px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.banner h1 {
+  font-size: 48px;
+  position: absolute;
+  z-index: 2;
+}
+.banner .opacity {
+  width: 100%;
+  max-width: 1240px;
+  height: 224px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 25px;
+  background-color: #000000;
+  opacity: 0.2;
+}
+.banner img {
+  border-radius: 25px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 1240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .main-home {
   border: solid 2px green;
   width: 90%;
@@ -89,40 +123,6 @@ footer .rights {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.main-home .banner {
-  width: 100%;
-  max-width: 1240px;
-  height: 224px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-  border: solid 2px red;
-}
-.main-home .banner h1 {
-  font-size: 48px;
-  position: absolute;
-  background-color: bisque;
-  z-index: 2;
-}
-.main-home .banner .opacity {
-  width: 100%;
-  max-width: 1240px;
-  height: 224px;
-  position: absolute;
-  z-index: 1;
-  background-color: #000000;
-  opacity: 0.2;
-}
-.main-home .banner img {
-  border-radius: 25px;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  max-width: 1240px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .gallery {
@@ -164,8 +164,18 @@ footer .rights {
   cursor: pointer;
 }
 
-.about {
-  border: solid 2px blue;
+/*** collapse page About ***/
+.main-about {
+  width: 90%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*** fin ***/
+.container-collapse {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,13 +183,12 @@ footer .rights {
   width: 80%;
   max-width: 1024px;
 }
-
-.collapse {
+.container-collapse .collapse {
   display: flex;
   flex-direction: column;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
-.collapse .title-collapse {
+.container-collapse .collapse .title-collapse {
   height: 55px;
   border-radius: 5px;
   display: flex;
@@ -190,39 +199,33 @@ footer .rights {
   font-size: 24px;
   color: #FFFFFF;
   background-color: #FF6060;
-}
-.collapse .title-collapse:hover {
   cursor: pointer;
 }
-.collapse .title-collapse .arrow-collapse {
+.container-collapse .collapse .title-collapse .arrow-collapse {
   width: 35px;
   height: 20px;
 }
-.collapse .title-collapse .arrow-collapse .arrow-up {
+.container-collapse .collapse .title-collapse .arrow-collapse .arrow-up {
   transition: transform 0.3s ease-in-out;
   transform: rotate(0);
 }
-.collapse .title-collapse .arrow-collapse .arrow-down {
+.container-collapse .collapse .title-collapse .arrow-collapse .arrow-down {
   transition: transform 0.3s ease-in-out;
   transform: rotate(-180deg);
 }
-.collapse .txt-collapse {
+.container-collapse .collapse .txt-collapse {
   font-size: 18px;
   color: #FF6060;
   background-color: #FEFEFE;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 20px;
-  transition: max-height 0.5s ease-in;
 }
-.collapse .txt-collapse .txt-open {
-  margin-top: -10px;
-  max-height: 400px;
+.container-collapse .collapse .txt-collapse .txt-open {
+  visibility: visible;
 }
-.collapse .txt-collapse .txt-close {
-  max-height: 0;
-  margin-top: -10px;
-  transition: max-height 0.5s ease-out;
+.container-collapse .collapse .txt-collapse .txt-close {
+  visibility: collapse;
 }
 
 .carousel {
