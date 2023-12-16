@@ -1,0 +1,25 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.main-error {
+    border: solid 2px green;
+    width: 90%;
+    max-width: 1240px;
+    @include column-center;
+    color: $primary-color;
+    .nb-error {
+        font-size: $error;
+        margin: 30px 0;
+    }
+    .txt-error {
+        font-size: $title;
+        margin: 30px 0 50px 0;
+    }
+    .redirection {
+        font-size: $general;
+        margin-bottom: 50px;
+        &:visited {
+            color: $primary-color;
+        }
+    }
+}

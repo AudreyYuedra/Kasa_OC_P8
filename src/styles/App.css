@@ -347,31 +347,4 @@ footer .rights {
 .container-housing .collapse-housing {
   display: flex;
   flex-direction: row;
-}
-
-.error {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #FF6060;
-  padding: 15px;
-}
-.error .nb-error {
-  font-size: 288px;
-}
-.error .txt-error {
-  font-size: 36px;
-  margin-bottom: 50px;
-}
-.error .redirection {
-  color: #FF6060;
-  font-size: 18px;
-  margin-bottom: 25px;
-}
-.error .redirection:visited {
-  color: #FF6060;
-  -webkit-text-decoration: #FF6060;
-          text-decoration: #FF6060;
 }/*# sourceMappingURL=App.css.map */
