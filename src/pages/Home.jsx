@@ -2,6 +2,7 @@ import Banner from "../components/Banner";
 import Banner_Home from "../assets/paysage_banner_home.png";
 import Gallery from "../components/Gallery";
 import "../styles/App.css";
+import "../styles/Home.css";
 
 function Home() {
   return (

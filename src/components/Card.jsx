@@ -1,10 +1,9 @@
-import "../styles/App.css";
-
-function Card({ title, cover }) {
+function Card({ title, src }) {
   return (
-    <div className="card">
+    <div className="content-card">
       <p className="title-card">{title}</p>
-      <img imageUrl={cover} alt={title} />
+      <div className="opacity-card"></div>
+      <img imageUrl={src} alt={`carte ${title}`} />
     </div>
   );
 }

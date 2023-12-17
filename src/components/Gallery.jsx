@@ -1,13 +1,12 @@
 import HousingDatas from "../datas/HousingDatas.json";
 import { Link } from "react-router-dom";
 import Card from "./Card";
-import "../styles/App.css";
 
 function Gallery() {
   return (
     <div className="gallery">
       {HousingDatas.map((data) => (
-        <Link key={data.id} to={`/Logement/${data.id}`}>
+        <Link key={data.id} to={`/Logement/${data.id}`} className="card">
           <Card src={data.cover} title={data.title} />
         </Link>
       ))}
