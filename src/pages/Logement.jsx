@@ -39,27 +39,27 @@ function Logement() {
 
           <div className="aside-infos">
             <div className="container-host">
-              <p className="host-name">{jsonHousing.name}</p>
+              <p className="host-name">{jsonHousing.host.name}</p>
               <img
-                src={jsonHousing.picture}
-                alt={jsonHousing.name}
+                src={jsonHousing.host.picture}
+                alt={jsonHousing.host.name}
                 className="host-photo"
               />
             </div>
 
-            <Rating />
+            <Rating rating={jsonHousing.rating} />
           </div>
         </div>
         <div className="collapse-housing">
           <Collapse
             title="Description"
             content={jsonHousing.description}
-            className="collapse-mini"
+            className="mini-collapse"
           />
           <Collapse
             title="Equipements"
             content={jsonHousing.equipements}
-            className="collapse-mini"
+            className="mini-collapse"
           />
         </div>
       </div>

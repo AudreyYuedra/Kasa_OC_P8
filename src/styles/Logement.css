@@ -1,11 +1,12 @@
 .main-logement {
-  border: solid 2px green;
   width: 90%;
   max-width: 1240px;
   display: flex;
   flex-direction: column;
 }
 .main-logement .carousel {
+  display: flex;
+  flex-direction: column;
   max-width: 1240px;
   height: 415px;
   border-radius: 25px;
@@ -13,11 +14,14 @@
 }
 .main-logement .carousel .container-arrows {
   border: solid 2px black;
+  width: 84.5%;
+  max-width: 1220px;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
+  position: absolute;
+  top: 300px;
   z-index: 1;
 }
 .main-logement .carousel .container-arrows .arrow {
@@ -33,7 +37,8 @@
   font-size: 18px;
   text-align: center;
   align-self: end;
-  position: absolute;
+  position: relative;
+  bottom: 30px;
   z-index: 1;
 }
 .main-logement .carousel .slide .img-slide {
@@ -82,6 +87,8 @@
   border-radius: 25px;
   padding: 8px;
   text-align: center;
+  padding: 5px 15px;
+  margin: 0 5px 10px 5px;
 }
 .main-logement .container-housing .main-infos .aside-infos {
   max-width: 250px;
@@ -99,14 +106,21 @@
   border: solid 2px black;
 }
 .main-logement .container-housing .main-infos .aside-infos .container-host .host-name {
+  border: solid 2px blue;
+  width: 180px;
   color: #FF6060;
   font-size: 18px;
+  display: flex;
+  align-items: center;
   justify-content: end;
 }
 .main-logement .container-housing .main-infos .aside-infos .container-host .host-photo {
   width: 52px;
   height: 52px;
   border-radius: 50px;
+  margin-right: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-logement .container-housing .main-infos .aside-infos .rating {
   height: 50px;
@@ -114,17 +128,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   padding: 5px 0;
   border: solid 2px red;
   gap: 5px;
 }
-.main-logement .container-housing .main-infos .aside-infos .rating .fa-solid {
+.main-logement .container-housing .main-infos .aside-infos .star-active {
   color: #FF6060;
 }
-.main-logement .container-housing .main-infos .aside-infos .rating .star-inactive {
-  color: lightgrey;
+.main-logement .container-housing .main-infos .aside-infos .star-inactive {
+  color: rgb(182, 172, 172);
 }
 .main-logement .container-housing .collapse-housing {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+.main-logement .container-housing .collapse-housing .mini-collapse {
+  width: 30%;
 }/*# sourceMappingURL=Logement.css.map */
