@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -116,31 +117,13 @@ footer .rights {
      object-fit: cover;
 }
 
-/*** collapse page About ***/
-.main-about {
-  width: 90%;
-  max-width: 1240px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/*** fin ***/
-.container-collapse {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  max-width: 1024px;
-}
-.container-collapse .collapse {
+/*** collapse général ***/
+.collapse {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
 }
-.container-collapse .collapse .title-collapse {
+.collapse .title-collapse {
   height: 55px;
   border-radius: 5px;
   display: flex;
@@ -153,19 +136,19 @@ footer .rights {
   background-color: #FF6060;
   cursor: pointer;
 }
-.container-collapse .collapse .title-collapse .arrow-collapse {
+.collapse .title-collapse .arrow-collapse {
   width: 35px;
   height: 20px;
 }
-.container-collapse .collapse .title-collapse .arrow-collapse .arrow-up {
+.collapse .title-collapse .arrow-collapse .arrow-up {
   transition: transform 0.3s ease-in-out;
   transform: rotate(0);
 }
-.container-collapse .collapse .title-collapse .arrow-collapse .arrow-down {
+.collapse .title-collapse .arrow-collapse .arrow-down {
   transition: transform 0.3s ease-in-out;
   transform: rotate(-180deg);
 }
-.container-collapse .collapse .txt-collapse {
+.collapse .txt-collapse {
   font-size: 18px;
   color: #FF6060;
   background-color: #FEFEFE;
@@ -173,133 +156,37 @@ footer .rights {
   border-bottom-right-radius: 5px;
   padding: 20px;
 }
-.container-collapse .collapse .txt-collapse .txt-open {
+.collapse .txt-collapse .txt-open {
   visibility: visible;
 }
-.container-collapse .collapse .txt-collapse .txt-close {
+.collapse .txt-collapse .txt-close {
   visibility: collapse;
 }
 
-.carousel {
+/*** collapse page About ***/
+.main-about {
+  width: 90%;
   max-width: 1240px;
-  height: 415px;
-  border-radius: 25px;
-  margin: 25px 0;
-  border: solid 2px yellow;
-}
-.carousel .container-arrows {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-.carousel .container-arrows .arrow {
-  width: 40px;
-  height: 60px;
-}
-.carousel .slide {
-  width: 100%;
-  height: 100%;
-}
-.carousel .slide .img-count {
-  font-size: 18px;
+  flex-direction: column;
   justify-content: center;
-  align-items: end;
-  position: absolute;
-  z-index: 1;
+  align-items: center;
 }
-.carousel .slide .img-slide {
-  width: 100%;
-  max-width: 1240px;
-  height: 100%;
-  border-radius: 25px;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
+.main-about .container-collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1024px;
 }
 
-.container-housing {
-  width: 100%;
-  max-width: 1240px;
-  border: solid 2px purple;
-  display: flex;
-  flex-direction: column;
-}
-.container-housing .main-infos {
+/*** collapse page Logement ***/
+.collapse-housing {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: solid 2px lightgreen;
 }
-.container-housing .main-infos .container-infos {
-  display: flex;
-  flex-direction: column;
-}
-.container-housing .main-infos .container-infos .housing-title {
-  color: #FF6060;
-  font-size: 36px;
-  margin: 10px 0;
-}
-.container-housing .main-infos .container-infos .location {
-  color: #FF6060;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-.container-housing .main-infos .container-infos .container-tags {
-  display: flex;
-  flex-direction: row;
-}
-.container-housing .main-infos .container-infos .container-tags .tag {
-  background-color: #FF6060;
-  font-size: 10px;
-  border-radius: 25px;
-  padding: 8px;
-  text-align: center;
-}
-.container-housing .main-infos .aside-infos {
-  max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: solid 2px orange;
-}
-.container-housing .main-infos .aside-infos .container-host {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  gap: 10px;
-  border: solid 2px black;
-}
-.container-housing .main-infos .aside-infos .container-host .host-name {
-  color: #FF6060;
-  font-size: 18px;
-  justify-content: end;
-}
-.container-housing .main-infos .aside-infos .container-host .host-photo {
-  width: 52px;
-  height: 52px;
-  border-radius: 50px;
-}
-.container-housing .main-infos .aside-infos .rating {
-  height: 50px;
-  font-size: 36px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 5px 0;
-  border: solid 2px red;
-  gap: 5px;
-}
-.container-housing .main-infos .aside-infos .rating .fa-solid {
-  color: #FF6060;
-}
-.container-housing .main-infos .aside-infos .rating .star-inactive {
-  color: lightgrey;
-}
-.container-housing .collapse-housing {
-  display: flex;
-  flex-direction: row;
+.collapse-housing .collapse-mini {
+  width: 30%;
 }/*# sourceMappingURL=App.css.map */

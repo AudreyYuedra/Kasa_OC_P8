@@ -6,6 +6,7 @@ import { Navigate, useParams } from "react-router-dom";
 import Collapse from "../components/Collapse.jsx";
 
 import "../styles/App.css";
+import "../styles/Logement.css";
 
 function Logement() {
   //récupère param url id
@@ -20,7 +21,7 @@ function Logement() {
   }
 
   return (
-    <main>
+    <main className="main-logement">
       <Carousel images={jsonHousing.pictures} />
 
       <div className="container-housing">
@@ -50,8 +51,16 @@ function Logement() {
           </div>
         </div>
         <div className="collapse-housing">
-          <Collapse title="Description" content={jsonHousing.description} />
-          <Collapse title="Equipements" content={jsonHousing.equipements} />
+          <Collapse
+            title="Description"
+            content={jsonHousing.description}
+            className="collapse-mini"
+          />
+          <Collapse
+            title="Equipements"
+            content={jsonHousing.equipements}
+            className="collapse-mini"
+          />
         </div>
       </div>
     </main>

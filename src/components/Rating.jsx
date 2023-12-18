@@ -1,4 +1,4 @@
-import "../styles/App.css";
+import "../styles/Logement.css";
 
 function Rating({ rating }) {
   const stars = [];
