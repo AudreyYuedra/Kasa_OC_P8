@@ -140,14 +140,6 @@ footer .rights {
   width: 35px;
   height: 20px;
 }
-.collapse .title-collapse .arrow-collapse .arrow-up {
-  transition: transform 0.3s ease-in-out;
-  transform: rotate(0);
-}
-.collapse .title-collapse .arrow-collapse .arrow-down {
-  transition: transform 0.3s ease-in-out;
-  transform: rotate(-180deg);
-}
 .collapse .txt-collapse {
   font-size: 18px;
   color: #FF6060;
@@ -156,10 +148,22 @@ footer .rights {
   border-bottom-right-radius: 5px;
   padding: 20px;
 }
-.collapse .txt-collapse .txt-open {
+
+.arrow-up {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(0);
+}
+
+.arrow-down {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-180deg);
+}
+
+.txt-open {
   visibility: visible;
 }
-.collapse .txt-collapse .txt-close {
+
+.txt-close {
   visibility: collapse;
 }
 

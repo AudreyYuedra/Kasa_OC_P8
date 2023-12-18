@@ -137,14 +137,6 @@ footer {
         & .arrow-collapse {
             width: 35px;
             height: 20px;
-            & .arrow-up {
-                transition: transform 0.3s ease-in-out;
-                transform: rotate(0);
-            }
-            & .arrow-down {
-                transition: transform 0.3s ease-in-out;
-                transform: rotate(-180deg);
-            }
         }
     }
     & .txt-collapse {
@@ -155,18 +147,30 @@ footer {
         border-bottom-right-radius: 5px;
         padding: 20px;
         //transition: max-height 0.5s ease-in;
-        & .txt-open {
-            visibility: visible;
-            //margin-top: -10px;
-            //max-height: 400px;
-        }
-        & .txt-close {
-            visibility: collapse;
-            //max-height: 0;
-            //margin-top: -10px;
-            //transition: max-height 0.5s ease-out;
-        }
     }
+}
+
+.arrow-up {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0);
+}
+
+.arrow-down {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(-180deg);
+}
+
+.txt-open {
+    visibility: visible;
+    //margin-top: -10px;
+    //max-height: 400px;
+}
+
+.txt-close {
+    visibility: collapse;
+    //max-height: 0;
+    //margin-top: -10px;
+    //transition: max-height 0.5s ease-out;
 }
 
 /*** collapse page About ***/
