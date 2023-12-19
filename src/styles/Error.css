@@ -21,4 +21,25 @@
 }
 .main-error .redirection:visited {
   color: #FF6060;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main-error {
+    max-width: 840px;
+  }
+  .main-error .nb-error {
+    font-size: 96px;
+    margin: 10px 0;
+  }
+  .main-error .txt-error {
+    font-size: 18px;
+    text-align: center;
+    margin: 15px 25px;
+  }
+  .main-error .redirection {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 }/*# sourceMappingURL=Error.css.map */

@@ -11,7 +11,6 @@
 }
 
 body {
-    background-color: pink;
     width: 100%;
     @include column;
     font-family: "Montserrat";
@@ -30,7 +29,6 @@ header {
     height: 70px;
     margin: 30px 0;
     @include space-between-row;
-    background-color: aquamarine;
     & .logo-color {
         width: 210px;
         height: 70px;
@@ -42,7 +40,6 @@ header {
         align-self: center;
         font-size: $second;
         color: $primary-color;
-        background-color: black;
         & .links{
             text-decoration-line: none;
             &:hover {
@@ -67,8 +64,6 @@ header {
 footer {
     width: 100%;
     height: 210px;
-    position: absolute;
-    bottom: end;
     @include column;
     justify-content: space-between;
     align-items: center;
@@ -94,6 +89,7 @@ footer {
     margin-bottom: 50px;
     & h1 {
         font-size: $banner;
+        text-align: center;
         position: absolute;
         z-index: 2;
         }
@@ -202,5 +198,83 @@ footer {
 
 ////////// VERSION MOBIL //////////
 @media (min-width: 320px) and (max-width: 767px) {
-    //
+    header {
+        width: 90%;
+        max-width: 1240px;
+        height: 46px;
+        margin: 30px 0;
+        @include space-between-row;
+        & .logo-color {
+            width: 145px;
+            height: 46px;
+        }
+        & nav {
+            width: 180px;
+            height: 30px;
+            @include space-between-row;
+            align-items: center;
+            font-size: $second-mob;
+            color: $primary-color;
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 210px;
+        @include column;
+        align-items: center;
+        background-color: $bg-color-second;
+        color: $general-color;
+        & .logo-white {
+            width: 122px;
+            height: 40px;
+            margin-top: 70px;
+        }
+        & .rights {
+            width: 122px;
+            font-size: $second-mob;
+            text-align: center;
+            margin-bottom: 55px;
+        }
+    }
+
+    .banner {
+        height: 112px;
+        margin-bottom: 10px;
+        & h1 {
+            font-size: $banner-mob;
+            text-align: center;
+            }
+    }
+
+    /*** Page About ***/
+    .container-collapse {
+        margin-top: 15px;
+    }
+
+    .collapse {
+        @include column;
+        margin-bottom: 30px;
+        & .title-collapse {
+            height: 20px;
+            font-size: $collapse;
+            & .arrow-collapse {
+                width: 20px;
+                height: 10px;
+            }
+        }
+        & .txt-collapse {
+            font-size: $collapse;
+            padding: 10px;
+        }
+    }
+
+    .collapse-housing {
+        max-width: 1240px;
+        @include column;
+        @include center;
+        & .collapse {
+            width: 100%;
+        }
+    }
 }

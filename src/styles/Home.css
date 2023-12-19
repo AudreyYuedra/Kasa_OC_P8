@@ -71,4 +71,17 @@
     max-width: 320px;
     height: 320px;
   }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .main-home {
+    max-width: 624px;
+  }
+  .main-home .gallery {
+    max-width: 624px;
+    padding: 10px;
+  }
+  .main-home .gallery .card {
+    width: 320px;
+    height: 320px;
+  }
 }/*# sourceMappingURL=Home.css.map */

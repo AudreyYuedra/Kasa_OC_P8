@@ -70,3 +70,19 @@
         }
     }
 }
+
+
+////////// VERSION MOBIL //////////
+@media (min-width: 320px) and (max-width: 767px) {
+    .main-home {
+        max-width: 624px;
+        & .gallery {
+            max-width: 624px;
+            padding: 10px;
+            & .card {
+                width: 320px;
+                height: 320px;
+            }
+        }
+    }
+}

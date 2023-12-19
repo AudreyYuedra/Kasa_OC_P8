@@ -6,19 +6,43 @@
     max-width: 1240px;
     @include column-center;
     color: $primary-color;
-    .nb-error {
+    & .nb-error {
         font-size: $error;
         margin: 30px 0;
     }
-    .txt-error {
+    & .txt-error {
         font-size: $title;
         margin: 30px 0 50px 0;
     }
-    .redirection {
+    & .redirection {
         font-size: $general;
         margin-bottom: 50px;
         &:visited {
             color: $primary-color;
+        }
+    }
+}
+
+
+////////// VERSION MOBIL //////////
+@media (min-width: 320px) and (max-width: 767px) {
+    .main-error {
+        max-width: 840px;
+        & .nb-error {
+            font-size: $error-mob;
+            margin: 10px 0;
+        }
+        & .txt-error {
+            font-size: $general-mob;
+            text-align: center;
+            margin: 15px 25px ;
+        }
+        & .redirection {
+            font-size: $tertiary-mob;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+    
         }
     }
 }

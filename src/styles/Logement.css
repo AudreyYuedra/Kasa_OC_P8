@@ -78,7 +78,7 @@
 }
 .main-logement .container-housing .main-infos .container-infos .container-tags .tag {
   background-color: #FF6060;
-  font-size: 10px;
+  font-size: 14px;
   border-radius: 25px;
   padding: 8px;
   text-align: center;
@@ -130,4 +130,81 @@
 }
 .main-logement .container-housing .main-infos .aside-infos .star-inactive {
   color: rgb(182, 172, 172);
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main-logement {
+    max-width: 840px;
+  }
+  .main-logement .carousel {
+    max-width: 840px;
+    height: 255px;
+  }
+  .main-logement .carousel .container-arrows {
+    width: 88.4%;
+    max-width: 840px;
+    padding: 0 5px;
+    position: absolute;
+    top: 200px;
+  }
+  .main-logement .carousel .container-arrows .arrow {
+    width: 25px;
+    height: 45px;
+  }
+  .main-logement .carousel .slide .img-count {
+    font-size: 14px;
+  }
+  .main-logement .container-housing {
+    max-width: 840px;
+  }
+  .main-logement .container-housing .main-infos {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-logement .container-housing .main-infos .container-infos .housing-title {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .main-logement .container-housing .main-infos .container-infos .location {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .main-logement .container-housing .main-infos .container-infos .container-tags .tag {
+    font-size: 10px;
+    padding: 10px;
+    padding: 5px 15px;
+    margin: 0 10px;
+  }
+  .main-logement .container-housing .main-infos .aside-infos {
+    max-width: 840px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .main-logement .container-housing .main-infos .aside-infos .container-host {
+    width: 180px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .main-logement .container-housing .main-infos .aside-infos .container-host .host-name {
+    width: 100px;
+    font-size: 14px;
+  }
+  .main-logement .container-housing .main-infos .aside-infos .container-host .host-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-logement .container-housing .main-infos .aside-infos .rating {
+    height: 50px;
+    font-size: 18px;
+    padding: 5px 0;
+    gap: 5px;
+    margin-left: 10px;
+  }
 }/*# sourceMappingURL=Logement.css.map */
