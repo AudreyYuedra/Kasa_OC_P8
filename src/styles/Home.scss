@@ -11,7 +11,6 @@
         @include center;
         flex-wrap: wrap;
         & .card {
-            border: solid 2px blue;
             height: 340px;
             width: 30%;
             max-width: 340px;
@@ -51,6 +50,22 @@
                     position: relative;
                     object-fit: cover;
                 }
+            }
+        }
+    }
+}
+
+////////// VERSION TABLET //////////
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main-home {
+        max-width: 824px;
+        & .gallery {
+            max-width: 824px;
+            padding: 20px;
+            & .card {
+                width: 45%;
+                max-width: 320px;
+                height: 320px;
             }
         }
     }

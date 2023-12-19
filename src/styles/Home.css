@@ -15,7 +15,6 @@
   flex-wrap: wrap;
 }
 .main-home .gallery .card {
-  border: solid 2px blue;
   height: 340px;
   width: 30%;
   max-width: 340px;
@@ -57,4 +56,19 @@
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-home {
+    max-width: 824px;
+  }
+  .main-home .gallery {
+    max-width: 824px;
+    padding: 20px;
+  }
+  .main-home .gallery .card {
+    width: 45%;
+    max-width: 320px;
+    height: 320px;
+  }
 }/*# sourceMappingURL=Home.css.map */

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*** App ***/
 * {
   margin: 0;
   padding: 0;
@@ -19,9 +20,9 @@ body .center {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px black;
 }
 
+/*** Header ***/
 header {
   width: 90%;
   max-width: 1240px;
@@ -63,9 +64,12 @@ header nav .links:visited {
   color: #FF6060;
 }
 
+/*** Footer ***/
 footer {
   width: 100%;
   height: 210px;
+  position: absolute;
+  bottom: end;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,6 +87,7 @@ footer .rights {
   margin-bottom: 25px;
 }
 
+/*** Banner ***/
 .banner {
   width: 100%;
   max-width: 1240px;
@@ -97,16 +102,6 @@ footer .rights {
   position: absolute;
   z-index: 2;
 }
-.banner .opacity {
-  width: 100%;
-  max-width: 1240px;
-  height: 224px;
-  position: absolute;
-  z-index: 1;
-  border-radius: 25px;
-  background-color: #000000;
-  opacity: 0.2;
-}
 .banner img {
   border-radius: 25px;
   position: relative;
@@ -115,6 +110,8 @@ footer .rights {
   max-width: 1240px;
   -o-object-fit: cover;
      object-fit: cover;
+  mix-blend-mode: darken;
+  filter: brightness(0.75);
 }
 
 /*** collapse général ***/
@@ -195,7 +192,7 @@ footer .rights {
   justify-content: space-between;
 }
 .collapse-housing .collapse {
-  width: 50%;
+  width: 45%;
   max-width: 580px;
 }
 .collapse-housing .collapse ul {
@@ -204,4 +201,17 @@ footer .rights {
 }
 .collapse-housing .collapse ul li {
   text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .collapse-housing {
+    max-width: 824px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .collapse-housing .collapse {
+    width: 40%;
+    max-width: 340px;
+  }
 }/*# sourceMappingURL=App.css.map */
