@@ -125,7 +125,7 @@ footer {
     @include column;
     margin-bottom: 50px;
     & .title-collapse {
-        height: 55px;
+        height: 40px;
         border-radius: 5px;
         @include space-between-row;
         align-items: center;
@@ -146,7 +146,6 @@ footer {
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         padding: 20px;
-        //transition: max-height 0.5s ease-in;
     }
 }
 
@@ -162,15 +161,12 @@ footer {
 
 .txt-open {
     visibility: visible;
-    //margin-top: -10px;
-    //max-height: 400px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .txt-close {
     visibility: collapse;
-    //max-height: 0;
-    //margin-top: -10px;
-    //transition: max-height 0.5s ease-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 /*** collapse page About ***/
@@ -187,9 +183,17 @@ footer {
 
 /*** collapse page Logement ***/
 .collapse-housing {
+    max-width: 1240px;
     @include space-between-row;
-    & .collapse-mini {
-        width: 30%;
+    & .collapse {
+        width: 50%;
+        max-width: 580px;
+        & ul {
+            @include column;
+            & li {
+                text-decoration: none;
+            }
+        }
     }
 }
 

@@ -8,7 +8,7 @@ import Collapse from "../components/Collapse.jsx";
 import "../styles/App.css";
 import "../styles/Logement.css";
 
-function Logement() {
+function Logement(content) {
   //récupère param url id
   const { id } = useParams();
 
@@ -51,15 +51,13 @@ function Logement() {
           </div>
         </div>
         <div className="collapse-housing">
-          <Collapse
-            title="Description"
-            content={jsonHousing.description}
-            className="mini-collapse"
-          />
+          <Collapse title="Description" content={jsonHousing.description} />
           <Collapse
             title="Equipements"
-            content={jsonHousing.equipements}
-            className="mini-collapse"
+            // eslint-disable-next-line array-callback-return
+            content={jsonHousing.equipments.map((equipments, index) => {
+              <ul key={index}>{equipments}</ul>;
+            })}
           />
         </div>
       </div>

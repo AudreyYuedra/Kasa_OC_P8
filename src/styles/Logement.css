@@ -10,10 +10,8 @@
   max-width: 1240px;
   height: 415px;
   border-radius: 25px;
-  border: solid 2px yellow;
 }
 .main-logement .carousel .container-arrows {
-  border: solid 2px black;
   width: 84.5%;
   max-width: 1220px;
   padding: 0 10px;
@@ -33,7 +31,6 @@
   height: 100%;
 }
 .main-logement .carousel .slide .img-count {
-  border: solid 2px blue;
   font-size: 18px;
   text-align: center;
   align-self: end;
@@ -53,7 +50,6 @@
 .main-logement .container-housing {
   width: 100%;
   max-width: 1240px;
-  border: solid 2px purple;
   display: flex;
   flex-direction: column;
 }
@@ -61,7 +57,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: solid 2px lightgreen;
 }
 .main-logement .container-housing .main-infos .container-infos {
   display: flex;
@@ -95,7 +90,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: solid 2px orange;
 }
 .main-logement .container-housing .main-infos .aside-infos .container-host {
   display: flex;
@@ -103,10 +97,9 @@
   justify-content: space-between;
   width: 100%;
   gap: 10px;
-  border: solid 2px black;
+  margin-top: 10px;
 }
 .main-logement .container-housing .main-infos .aside-infos .container-host .host-name {
-  border: solid 2px blue;
   width: 180px;
   color: #FF6060;
   font-size: 18px;
@@ -130,7 +123,6 @@
   align-items: center;
   justify-content: center;
   padding: 5px 0;
-  border: solid 2px red;
   gap: 5px;
 }
 .main-logement .container-housing .main-infos .aside-infos .star-active {
@@ -138,12 +130,4 @@
 }
 .main-logement .container-housing .main-infos .aside-infos .star-inactive {
   color: rgb(182, 172, 172);
-}
-.main-logement .container-housing .collapse-housing {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.main-logement .container-housing .collapse-housing .mini-collapse {
-  width: 30%;
 }/*# sourceMappingURL=Logement.css.map */

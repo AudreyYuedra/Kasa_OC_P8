@@ -124,7 +124,7 @@ footer .rights {
   margin-bottom: 50px;
 }
 .collapse .title-collapse {
-  height: 55px;
+  height: 40px;
   border-radius: 5px;
   display: flex;
   flex-direction: row;
@@ -161,10 +161,12 @@ footer .rights {
 
 .txt-open {
   visibility: visible;
+  transition: transform 0.3s ease-in-out;
 }
 
 .txt-close {
   visibility: collapse;
+  transition: transform 0.3s ease-in-out;
 }
 
 /*** collapse page About ***/
@@ -187,10 +189,19 @@ footer .rights {
 
 /*** collapse page Logement ***/
 .collapse-housing {
+  max-width: 1240px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.collapse-housing .collapse-mini {
-  width: 30%;
+.collapse-housing .collapse {
+  width: 50%;
+  max-width: 580px;
+}
+.collapse-housing .collapse ul {
+  display: flex;
+  flex-direction: column;
+}
+.collapse-housing .collapse ul li {
+  text-decoration: none;
 }/*# sourceMappingURL=App.css.map */

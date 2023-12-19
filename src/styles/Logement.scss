@@ -11,9 +11,7 @@
         max-width: 1240px;
         height: 415px;
         border-radius: $round;
-        border: solid 2px yellow;
         & .container-arrows {
-            border: solid 2px black;
             width: 84.5%;
             max-width: 1220px;
             padding: 0 10px;
@@ -30,7 +28,6 @@
             width: 100%;
             height: 100%;
             & .img-count {
-                border: solid 2px blue;
                 font-size: $general;
                 text-align: center;
                 align-self: end;
@@ -51,11 +48,9 @@
     & .container-housing {
         width: 100%;
         max-width: 1240px;
-        border: solid 2px purple;
         @include column;
         & .main-infos {
             @include space-between-row;
-            border: solid 2px lightgreen;
             & .container-infos {
                 @include column;
                 & .housing-title {
@@ -85,14 +80,12 @@
                 max-width: 250px;
                 @include column;
                 justify-content: space-between;
-                border: solid 2px orange;
                 & .container-host {
                     @include space-between-row;
                     width: 100%;
                     gap: 10px;
-                    border: solid 2px black;
+                    margin-top: 10px;
                     & .host-name {
-                        border: solid 2px blue;
                         width: 180px;
                         color: $primary-color;
                         font-size: $general;
@@ -115,7 +108,6 @@
                     align-items: center;
                     justify-content: center;
                     padding: 5px 0;
-                    border: solid 2px red;
                     gap: 5px;
                 }
                 & .star-active {
@@ -126,11 +118,18 @@
                 }
             }
         }
-        & .collapse-housing {
-            @include space-between-row;
-            & .mini-collapse {
-                width: 30%;
-            }
-        }
     }
+}
+
+
+
+////////// RESPONSIVE TABLET //////////
+@media (max-width: 375px) {
+    //
+}
+
+
+////////// RESPONSIVE MOBIL //////////
+@media (max-width: 1024px) {
+    //
 }
