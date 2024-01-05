@@ -37,7 +37,7 @@ header .logo-color {
 }
 header nav {
   width: 280px;
-  height: 30px;
+  height: 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -45,20 +45,21 @@ header nav {
   font-size: 24px;
   color: #FF6060;
 }
-header nav .links {
-  text-decoration-line: none;
+header nav .column-nav {
+  display: flex;
+  flex-direction: column;
 }
-header nav .links:hover {
+header nav .column-nav .links {
+  text-decoration-line: none;
+  position: relative;
   cursor: pointer;
 }
-header nav .links:active {
+header nav .column-nav .links:visited {
   color: #FF6060;
-  text-decoration: underline;
-  text-underline-offset: -35px;
-  text-decoration-thickness: 2px;
 }
-header nav .links:visited {
-  color: #FF6060;
+header nav .column-nav .nav-active {
+  height: 2px;
+  background-color: #FF6060;
 }
 
 /*** Footer ***/
@@ -140,6 +141,8 @@ footer .rights {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .arrow-up {
@@ -154,11 +157,13 @@ footer .rights {
 
 .txt-open {
   visibility: visible;
+  transform: scaleY(100%);
   transition: transform 0.3s ease-in-out;
 }
 
 .txt-close {
   visibility: collapse;
+  transform: scaleY(0%);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -190,13 +195,6 @@ footer .rights {
 .collapse-housing .collapse {
   width: 45%;
   max-width: 580px;
-}
-.collapse-housing .collapse ul {
-  display: flex;
-  flex-direction: column;
-}
-.collapse-housing .collapse ul li {
-  text-decoration: none;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

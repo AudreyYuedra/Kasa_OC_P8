@@ -35,30 +35,30 @@ header {
     }
     & nav {
         width: 280px;
-        height: 30px;
+        height: 32px;
         @include space-between-row;
         align-self: center;
         font-size: $second;
         color: $primary-color;
-        & .links{
-            text-decoration-line: none;
-            &:hover {
+        & .column-nav {
+            @include column;
+            & .links {
+                text-decoration-line: none;
+                position: relative;
                 cursor: pointer;
+                &:visited {
+                    color: $primary-color;
+                }
             }
-            &:active {
-                color: $primary-color;
-                text-decoration: underline;
-                text-underline-offset: -35px;
-                text-decoration-thickness: 2px;
-                //pas fini
-                //text-decoration-line: solid 2px $primary-color;
-            }
-            &:visited {
-                color: $primary-color;
+            & .nav-active {
+                height: 2px;
+                background-color: $primary-color;
             }
         }
     }
 }
+
+
 
 /*** Footer ***/
 footer {
@@ -131,6 +131,7 @@ footer {
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         padding: 20px;
+        @include column;
     }
 }
 
@@ -146,11 +147,13 @@ footer {
 
 .txt-open {
     visibility: visible;
+    transform: scaleY(100%);
     transition: transform 0.3s ease-in-out;
 }
 
 .txt-close {
     visibility: collapse;
+    transform: scaleY(0%);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -173,12 +176,6 @@ footer {
     & .collapse {
         width: 45%;
         max-width: 580px;
-        & ul {
-            @include column;
-            & li {
-                text-decoration: none;
-            }
-        }
     }
 }
 

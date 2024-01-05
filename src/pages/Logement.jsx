@@ -14,6 +14,12 @@ function Logement(content) {
 
   //recherche données logement via id fichier json
   const jsonHousing = HousingDatas.find((element) => element.id === id);
+  //récupération liste équipements
+  const dataEquipments = jsonHousing.equipments.map((equipment) => (
+    <p className="equipement-text" key={equipment}>
+          {equipment}
+          <br />
+    </p>))
 
   //check si logement existe sinon => page error
   if (!jsonHousing) {
@@ -54,10 +60,7 @@ function Logement(content) {
           <Collapse title="Description" content={jsonHousing.description} />
           <Collapse
             title="Equipements"
-            // eslint-disable-next-line array-callback-return
-            content={jsonHousing.equipments.map((equipments, index) => {
-              <ul key={index}>{equipments}</ul>;
-            })}
+            content={dataEquipments}
           />
         </div>
       </div>
