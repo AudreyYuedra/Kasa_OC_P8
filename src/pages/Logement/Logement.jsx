@@ -1,12 +1,10 @@
 import HousingDatas from "../../datas/HousingDatas.json"
 import { Navigate, useParams } from "react-router-dom"
-import Header from "../../components/Header/Header.jsx"
 import Carousel from "../../components/Carousel/Carousel.jsx"
 import Tags from "../../components/Tags/Tags.jsx"
 import Host from "../../components/Host/Host.jsx"
 import Rating from "../../components/Rating/Rating.jsx"
 import Collapse from "../../components/Collapse/Collapse.jsx"
-import Footer from "../../components/Footer/Footer.jsx"
 
 import "./Logement.css"
 
@@ -34,37 +32,33 @@ function Logement() {
    ))
 
    return (
-      <div>
-         <Header />
-         <main>
-            <Carousel images={jsonHousing.pictures} />
+      <main>
+         <Carousel images={jsonHousing.pictures} />
 
-            <section>
-               <article>
-                  <div className="infos">
-                     <h2>{jsonHousing.title}</h2>
-                     <p className="location">{jsonHousing.location}</p>
+         <section>
+            <article>
+               <div className="infos">
+                  <h2>{jsonHousing.title}</h2>
+                  <p className="location">{jsonHousing.location}</p>
 
-                     <div className="container-tags">
-                        {jsonHousing.tags.map((tag, index) => (
-                           <Tags key={index} content={tag} />
-                        ))}
-                     </div>
+                  <div className="container-tags">
+                     {jsonHousing.tags.map((tag, index) => (
+                        <Tags key={index} content={tag} />
+                     ))}
                   </div>
-
-                  <aside>
-                     <Host text={jsonHousing.host.name} source={jsonHousing.host.picture} />
-                     <Rating rating={jsonHousing.rating} />
-                  </aside>
-               </article>
-
-               <div className="container-collapse">
-                  <Collapse title="Description" content={jsonHousing.description} />
-                  <Collapse title="Equipements" content={dataEquipments} />
                </div>
-            </section>
-         </main>
-         <Footer />
-      </div>
+
+               <aside>
+                  <Host text={jsonHousing.host.name} source={jsonHousing.host.picture} />
+                  <Rating rating={jsonHousing.rating} />
+               </aside>
+            </article>
+
+            <div className="container-collapse">
+               <Collapse title="Description" content={jsonHousing.description} />
+               <Collapse title="Equipements" content={dataEquipments} />
+            </div>
+         </section>
+      </main>
    )
 }

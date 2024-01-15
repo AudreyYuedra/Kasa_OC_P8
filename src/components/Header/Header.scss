@@ -9,18 +9,19 @@ header {
     height: 70px;
     margin: 30px 0;
     @include space-between-row;
-    & .logo-color {
+    & img {
         width: 210px;
         height: 70px;
     }
     & nav {
         width: 280px;
-        height: 32px;
+        height: 40px;
         @include space-between-row;
         align-self: center;
         font-size: $second;
         color: $primary-color;
-        & article {
+        & .nav-link {
+            height: 40px;
             @include column;
             & .links {
                 text-decoration-line: none;

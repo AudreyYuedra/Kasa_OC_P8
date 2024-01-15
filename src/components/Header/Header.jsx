@@ -10,21 +10,21 @@ function Header() {
 
    return (
       <header>
-         <img src={logo_kasa_color} alt="Logo Kasa" className="logo-color" />
+         <img src={logo_kasa_color} alt="Logo Kasa" />
          <nav>
-            <article>
+            <div className="nav-link">
                <Link to="/" className="links">
                   Accueil
                </Link>
                <div className={location.pathname === "/" ? "focus-page" : ""}></div>
-            </article>
+            </div>
 
-            <article>
+            <div className="nav-link">
                <Link to="/About" className="links">
                   A Propos
                </Link>
                <div className={location.pathname === "/About" ? "focus-page" : ""}></div>
-            </article>
+            </div>
          </nav>
       </header>
    )

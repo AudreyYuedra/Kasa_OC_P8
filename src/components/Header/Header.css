@@ -8,13 +8,13 @@ header {
   flex-direction: row;
   justify-content: space-between;
 }
-header .logo-color {
+header img {
   width: 210px;
   height: 70px;
 }
 header nav {
   width: 280px;
-  height: 32px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,19 +22,20 @@ header nav {
   font-size: 24px;
   color: #FF6060;
 }
-header nav article {
+header nav .nav-link {
+  height: 40px;
   display: flex;
   flex-direction: column;
 }
-header nav article .links {
+header nav .nav-link .links {
   text-decoration-line: none;
   position: relative;
   cursor: pointer;
 }
-header nav article .links:visited {
+header nav .nav-link .links:visited {
   color: #FF6060;
 }
-header nav article .focus-page {
+header nav .nav-link .focus-page {
   height: 2px;
   background-color: #FF6060;
 }
