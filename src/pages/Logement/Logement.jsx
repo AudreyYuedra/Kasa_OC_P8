@@ -1,11 +1,14 @@
-import Carousel from "../../components/Carousel.jsx"
 import HousingDatas from "../../datas/HousingDatas.json"
-import Tags from "../../components/Tags.jsx"
-import Rating from "../../components/Rating.jsx"
 import { Navigate, useParams } from "react-router-dom"
+import Carousel from "../../components/Carousel.jsx"
+import Tags from "../../components/Tags.jsx"
+import Host from "../../components/Host.jsx"
+import Rating from "../../components/Rating.jsx"
 import Collapse from "../../components/Collapse.jsx"
 
 import "./Logement.css"
+
+export default Logement
 
 function Logement() {
    //* Récupère param url id
@@ -32,10 +35,10 @@ function Logement() {
       <main>
          <Carousel images={jsonHousing.pictures} />
 
-         <div className="container-housing">
-            <div className="main-infos">
-               <div className="container-infos">
-                  <h2 className="housing-title">{jsonHousing.title}</h2>
+         <section>
+            <article>
+               <div className="infos">
+                  <h2>{jsonHousing.title}</h2>
                   <p className="location">{jsonHousing.location}</p>
 
                   <div className="container-tags">
@@ -45,22 +48,17 @@ function Logement() {
                   </div>
                </div>
 
-               <div className="aside-infos">
-                  <div className="container-host">
-                     <p className="host-name">{jsonHousing.host.name}</p>
-                     <img src={jsonHousing.host.picture} alt={jsonHousing.host.name} className="host-photo" />
-                  </div>
-
+               <aside>
+                  <Host text={jsonHousing.host.name} source={jsonHousing.host.picture} />
                   <Rating rating={jsonHousing.rating} />
-               </div>
-            </div>
+               </aside>
+            </article>
+
             <div className="collapse-housing">
                <Collapse title="Description" content={jsonHousing.description} />
                <Collapse title="Equipements" content={dataEquipments} />
             </div>
-         </div>
+         </section>
       </main>
    )
 }
-
-export default Logement

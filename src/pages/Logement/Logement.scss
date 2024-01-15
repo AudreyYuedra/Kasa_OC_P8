@@ -7,15 +7,15 @@ main {
     width: 90%;
     max-width: 1240px;
     @include column;
-    & .container-housing {
+    & section {
         width: 100%;
         max-width: 1240px;
         @include column;
-        & .main-infos {
+        & article {
             @include space-between-row;
-            & .container-infos {
+            & .infos {
                 @include column;
-                & .housing-title {
+                & h2 {
                     color: $primary-color;
                     font-size: $title;
                     margin: 10px 0;
@@ -27,57 +27,12 @@ main {
                 }
                 & .container-tags {
                     @include row;
-                    & .tag {
-                        background-color: $primary-color;
-                        font-size: $tag;
-                        border-radius: 25px;
-                        padding: 8px;
-                        text-align: center;
-                        padding: 5px 15px;
-                        margin: 0 5px 10px 5px;
-                    }
                 }
             }
-            & .aside-infos {
+            & aside {
                 max-width: 250px;
                 @include column;
                 justify-content: space-between;
-                & .container-host {
-                    @include space-between-row;
-                    width: 100%;
-                    gap: 10px;
-                    margin-top: 10px;
-                    & .host-name {
-                        width: 180px;
-                        color: $primary-color;
-                        font-size: $general;
-                        display: flex;
-                        align-items: center;
-                        justify-content: end;
-                    }
-                    & .host-photo {
-                        width: 52px;
-                        height: 52px;
-                        border-radius: 50px;
-                        margin-right: 5px;
-                        object-fit: cover;
-                    }
-                }
-                & .rating {
-                    height: 50px;
-                    font-size: $title;
-                    @include row;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 5px 0;
-                    gap: 5px;
-                }
-                & .star-active {
-                    color: $primary-color;
-                }
-                & .star-inactive {
-                    color: rgb(182, 172, 172); //gris clair
-                }
             }
         }
     }
@@ -88,13 +43,12 @@ main {
 @media (min-width: 320px) and (max-width: 767px) {
     main {
         max-width: 840px;
-        
-        & .container-housing {
+        & section {
             max-width: 840px;
-            & .main-infos {
+            & article {
                 @include column;
-                & .container-infos {
-                    & .housing-title {
+                & .infos {
+                    & h2 {
                         font-size: $general-mob;
                         margin: 10px 0;
                     }
@@ -102,44 +56,12 @@ main {
                         font-size: $tertiary-mob;
                         margin-bottom: 10px;
                     }
-                    & .container-tags {
-                        & .tag {
-                            font-size: $tag-mob;
-                            padding: 10px;
-                            padding: 5px 15px;
-                            margin: 0 10px;
-                        }
-                    }
                 }
-                & .aside-infos {
+                & aside {
                     max-width: 840px;
                     @include space-between-row;
                     flex-direction: row-reverse;
                     justify-content: space-between;
-                    & .container-host {
-                        width: 180px;
-                        margin-top: 5px;
-                        margin-bottom: 10px;
-                        & .host-name {
-                            width: 100px;
-                            font-size: $tertiary-mob;
-
-                        }
-                        & .host-photo {
-                            width: 40px;
-                            height: 40px;
-                            border-radius: 50px;
-                            margin-right: 10px;
-                            object-fit: cover;
-                        }
-                    }
-                    & .rating {
-                        height: 50px;
-                        font-size: $general-mob;
-                        padding: 5px 0;
-                        gap: 5px;
-                        margin-left: 10px;
-                    }
                 }
             }
         }

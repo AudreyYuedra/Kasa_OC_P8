@@ -1,0 +1,13 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+.tag {
+    background-color: $primary-color;
+    font-size: $tag;
+    border-radius: 25px;
+    padding: 8px;
+    text-align: center;
+    padding: 5px 15px;
+    margin: 0 5px 10px 5px;
+}
