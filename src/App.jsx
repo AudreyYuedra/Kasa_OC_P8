@@ -2,9 +2,9 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home"
 import About from "./pages/About"
 import Logement from "./pages/Logement"
-import Error from "./pages/Error"
+import Error from "./pages/Error/Error"
 
-import "./styles/App.css"
+import "App.css"
 
 export default App
 
