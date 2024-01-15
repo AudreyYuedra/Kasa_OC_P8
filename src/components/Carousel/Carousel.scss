@@ -1,0 +1,67 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+/*** VERSION DESKTOP ***/
+figure {
+    @include column;
+    max-width: 1240px;
+    height: 415px;
+    border-radius: $round;
+    & .container-arrows {
+        width: 84.5%;
+        max-width: 1220px;
+        padding: 0 10px;
+        @include space-between-row;
+        position: absolute;
+        top: 300px;
+        z-index: 1;
+        & .arrow {
+            width: 40px;
+            height: 60px;
+        }
+    }
+    & .slide {
+        width: 100%;
+        height: 100%;
+        & figcaption {
+            font-size: $general;
+            text-align: center;
+            align-self: end;
+            position: relative;
+            bottom: 30px;
+            z-index: 1;
+        }
+        & .img-slide {
+            width: 100%;
+            max-width: 1240px;
+            height: 100%;
+            border-radius: $round;
+            position: relative;
+            object-fit: cover;
+        }
+    }
+}
+
+
+/*** VERSION DESKTOP ***/
+figure {
+    max-width: 840px;
+    height: 255px;
+    & .container-arrows {
+        width: 88.4%;
+        max-width: 840px;
+        padding: 0 5px;
+        position: absolute;
+        top: 200px;
+        & .arrow {
+            width: 25px;
+            height: 45px;
+        }
+    }
+    & .slide {
+        & figcaption {
+            font-size: $tertiary-mob;
+        }
+    }
+}
