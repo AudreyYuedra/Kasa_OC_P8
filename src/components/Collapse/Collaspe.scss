@@ -1,0 +1,75 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/*** VERSION DESKTOP ***/
+article {
+    @include column;
+    margin-bottom: 50px;
+    & .title-collapse {
+        height: 40px;
+        border-radius: 5px;
+        @include space-between-row;
+        align-items: center;
+        padding: 10px 20px 10px 15px;
+        font-size: $second;
+        color: $general-color;
+        background-color: $primary-color;
+        cursor: pointer;
+        & .arrow-collapse {
+            width: 35px;
+            height: 20px;
+        }
+    }
+    & .txt-collapse {
+        font-size: $general;
+        color: $primary-color;
+        background-color: $bg-container;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 20px;
+        @include column;
+    }
+}
+
+.arrow-up {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0);
+}
+
+.arrow-down {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(-180deg);
+}
+
+.txt-open {
+    visibility: visible;
+    transform: scaleY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.txt-close {
+    visibility: collapse;
+    transform: scaleY(0%);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/*** VERSION MOBILE ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+    article {
+        @include column;
+        margin-bottom: 30px;
+        & .title-collapse {
+            height: 20px;
+            font-size: $collapse;
+            & .arrow-collapse {
+                width: 20px;
+                height: 10px;
+            }
+        }
+        & .txt-collapse {
+            font-size: $collapse;
+            padding: 10px;
+        }
+    }
+}

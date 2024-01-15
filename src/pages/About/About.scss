@@ -1,6 +1,8 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
+
+/*** VERSION DESKTOP ***/
 main {
     width: 90%;
     max-width: 1240px;
@@ -9,5 +11,13 @@ main {
         @include column-center;
         width: 80%;
         max-width: 1024px;
+    }
+}
+
+
+/*** VERSION MOBILE ***/
+@media (min-width: 320px) and (max-width: 767px) {
+    section {
+    margin-top: 15px;
     }
 }

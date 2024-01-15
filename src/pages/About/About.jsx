@@ -10,7 +10,7 @@ export default About
 function About() {
    return (
       <main>
-         <Banner imageUrl={Banner_About} />
+         <Banner imageUrl={Banner_About} content="vallée de colline recouvert de forêts" />
          <section>
             {AboutDatas.map((data, index) => (
                <Collapse key={index} title={data.title} content={data.description} />
