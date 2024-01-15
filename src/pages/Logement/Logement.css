@@ -1,0 +1,89 @@
+/*** VERSION DESKTOP ***/
+main {
+  width: 90%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+}
+main section {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+}
+main section article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main section article .infos {
+  display: flex;
+  flex-direction: column;
+}
+main section article .infos h2 {
+  color: #FF6060;
+  font-size: 36px;
+  margin: 10px 0;
+}
+main section article .infos .location {
+  color: #FF6060;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+main section article .infos .container-tags {
+  display: flex;
+  flex-direction: row;
+}
+main section article aside {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*** VERSION TABLETTE ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-collapse {
+    max-width: 824px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/*** VERSION MOBILE ***/
+@media (min-width: 320px) and (max-width: 767px) {
+  main {
+    max-width: 840px;
+  }
+  main section {
+    max-width: 840px;
+  }
+  main section article {
+    display: flex;
+    flex-direction: column;
+  }
+  main section article .infos h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  main section article .infos .location {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  main section article aside {
+    max-width: 840px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .container-collapse {
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=Logement.css.map */

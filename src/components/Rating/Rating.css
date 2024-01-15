@@ -1,0 +1,27 @@
+/*** VERSION DESKTOP ***/
+.rating {
+  height: 50px;
+  font-size: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  gap: 5px;
+}
+
+.star-active {
+  color: #FF6060;
+}
+
+.star-inactive {
+  color: rgb(182, 172, 172);
+}
+
+/*** VERSION MOBILE ***/
+@media (min-width: 320px) and (max-width: 767px) {
+  .rating {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+}/*# sourceMappingURL=Rating.css.map */

@@ -1,0 +1,83 @@
+/*** VERSION DESKTOP ***/
+article {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+article .title-collapse {
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 15px;
+  font-size: 24px;
+  color: #FFFFFF;
+  background-color: #FF6060;
+  cursor: pointer;
+}
+article .title-collapse img {
+  width: 35px;
+  height: 20px;
+}
+article p {
+  font-size: 18px;
+  color: #FF6060;
+  background-color: #FEFEFE;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow-up {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(0);
+}
+
+.arrow-down {
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-180deg);
+}
+
+.txt-open {
+  visibility: visible;
+  transform: scaleY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.txt-close {
+  visibility: collapse;
+  transform: scaleY(0%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/*** VERSION TABLETTE ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+  article {
+    width: 40%;
+    max-width: 340px;
+  }
+}
+/*** VERSION MOBILE ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+  article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  article p {
+    height: 20px;
+    font-size: 13px;
+  }
+  article p img {
+    width: 20px;
+    height: 10px;
+  }
+  article p {
+    font-size: 13px;
+    padding: 10px;
+  }
+}/*# sourceMappingURL=Collaspe.css.map */

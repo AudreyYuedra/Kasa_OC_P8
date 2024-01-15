@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
 
 
 /*** VERSION DESKTOP ***/
@@ -12,10 +12,11 @@
     padding: 5px 0;
     gap: 5px;
 }
-& .star-active {
+
+.star-active {
     color: $primary-color;
 }
-& .star-inactive {
+.star-inactive {
     color: rgb(182, 172, 172); //gris clair
 }
 
@@ -23,10 +24,7 @@
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
     .rating {
-        height: 50px;
         font-size: $general-mob;
-        padding: 5px 0;
-        gap: 5px;
         margin-left: 10px;
     }
 }
