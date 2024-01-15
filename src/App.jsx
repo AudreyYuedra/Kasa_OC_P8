@@ -4,7 +4,7 @@ import About from "./pages/About/About.jsx"
 import Logement from "./pages/Logement/Logement.jsx"
 import Error from "./pages/Error/Error.jsx"
 
-import "App.css"
+import "./App.css"
 
 export default App
 
