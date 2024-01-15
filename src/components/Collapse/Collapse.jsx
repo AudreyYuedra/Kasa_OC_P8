@@ -20,11 +20,12 @@ function Collapse({ title, content }) {
             <img
                src={Arrow_Collapse}
                alt="flèche ouvrante et fermante"
-               className={`arrow-collapse ${close ? "arrow-up" : "arrow-down"}`} // 1ère value => true ; 2nd value => false
+               className={close ? "arrow-up" : "arrow-down"} // 1ère value => true ; 2nd value => false
             />
          </div>
+
          <div className={close ? "txt-close" : "txt-open"}>
-            <p className="txt-collapse">{content}</p>
+            <p>{content}</p>
          </div>
       </article>
    )

@@ -54,7 +54,7 @@ function Logement() {
                </aside>
             </article>
 
-            <div className="collapse-housing">
+            <div className="container-collapse">
                <Collapse title="Description" content={jsonHousing.description} />
                <Collapse title="Equipements" content={dataEquipments} />
             </div>
