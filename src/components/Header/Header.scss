@@ -1,0 +1,63 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+/*** VERSION DESKTOP ***/
+header {
+    width: 90%;
+    max-width: 1240px;
+    height: 70px;
+    margin: 30px 0;
+    @include space-between-row;
+    & .logo-color {
+        width: 210px;
+        height: 70px;
+    }
+    & nav {
+        width: 280px;
+        height: 32px;
+        @include space-between-row;
+        align-self: center;
+        font-size: $second;
+        color: $primary-color;
+        & article {
+            @include column;
+            & .links {
+                text-decoration-line: none;
+                position: relative;
+                cursor: pointer;
+                &:visited {
+                    color: $primary-color;
+                }
+            }
+            & .focus-page {
+                height: 2px;
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+
+/*** VERSION MOBILE ***/
+@media (min-width: 320px) and (max-width: 767px) {
+    header {
+        width: 90%;
+        max-width: 1240px;
+        height: 46px;
+        margin: 30px 0;
+        @include space-between-row;
+        & .logo-color {
+            width: 145px;
+            height: 46px;
+        }
+        & nav {
+            width: 180px;
+            height: 30px;
+            @include space-between-row;
+            align-items: center;
+            font-size: $second-mob;
+            color: $primary-color;
+        }
+    }
+}
