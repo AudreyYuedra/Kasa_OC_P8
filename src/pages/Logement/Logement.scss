@@ -13,6 +13,7 @@
         @include column;
         & .article-logement {
             @include space-between-row;
+            margin-bottom: 10px;
             & .infos {
                 @include column;
                 & .h2-logement {
@@ -33,6 +34,14 @@
                 max-width: 250px;
                 @include column;
                 justify-content: space-between;
+            }
+        }
+        & .container-collapse {
+            display: flex;
+            flex-wrap: wrap;
+            @include row;
+            & .collapse-logement {
+                width: 10%;
             }
         }
     }

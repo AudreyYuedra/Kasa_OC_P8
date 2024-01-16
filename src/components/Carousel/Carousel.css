@@ -7,9 +7,9 @@
   border-radius: 25px;
 }
 .figure-carousel .container-arrows {
-  width: 84.5%;
+  width: 87.2%;
   max-width: 1220px;
-  padding: 0 10px;
+  padding: 0 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,6 +20,7 @@
 .figure-carousel .container-arrows .arrow-carousel {
   width: 40px;
   height: 60px;
+  cursor: pointer;
 }
 .figure-carousel .slide {
   width: 100%;
@@ -35,7 +36,6 @@
 }
 .figure-carousel .slide .img-slide {
   width: 100%;
-  max-width: 1240px;
   height: 100%;
   border-radius: 25px;
   position: relative;
@@ -43,22 +43,41 @@
      object-fit: cover;
 }
 
-/*** VERSION DESKTOP ***/
-.figure-carousel {
-  max-width: 840px;
-  height: 255px;
+/*** VERSION TABLETTE ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .figure-carousel {
+    height: 320px;
+  }
+  .figure-carousel .container-arrows {
+    width: 88%;
+    padding: 0 10px;
+    position: absolute;
+    top: 250px;
+  }
+  .figure-carousel .container-arrows .arrow-carousel {
+    width: 25px;
+    height: 45px;
+  }
+  .figure-carousel .slide figcaption {
+    font-size: 14px;
+  }
 }
-.figure-carousel .container-arrows {
-  width: 88.4%;
-  max-width: 840px;
-  padding: 0 5px;
-  position: absolute;
-  top: 200px;
-}
-.figure-carousel .container-arrows .arrow-carousel {
-  width: 25px;
-  height: 45px;
-}
-.figure-carousel .slide figcaption {
-  font-size: 14px;
+/*** VERSION MOBILE ***/
+@media (min-width: 320px) and (max-width: 767px) {
+  .figure-carousel {
+    height: 255px;
+  }
+  .figure-carousel .container-arrows {
+    width: 88.5%;
+    padding: 0 5px;
+    position: absolute;
+    top: 200px;
+  }
+  .figure-carousel .container-arrows .arrow-carousel {
+    width: 20px;
+    height: 40px;
+  }
+  .figure-carousel figcaption {
+    visibility: hidden;
+  }
 }/*# sourceMappingURL=Carousel.css.map */

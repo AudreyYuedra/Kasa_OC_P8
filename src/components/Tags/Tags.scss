@@ -2,12 +2,21 @@
 @import "../../styles/_mixins.scss";
 
 
+/*** VERSION DESKTOP ***/
 .tag {
     background-color: $primary-color;
     font-size: $tag;
     border-radius: 25px;
-    padding: 8px;
     text-align: center;
     padding: 5px 15px;
     margin: 0 5px 10px 5px;
+}
+
+
+/*** VERSION MOBILE ***/
+@media (min-width: 320px) and (max-width: 767px) {
+    .tag {
+        padding: 5px 12px;
+        margin: 0 10px 10px 10px;
+    }
 }

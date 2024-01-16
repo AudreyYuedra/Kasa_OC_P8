@@ -4,17 +4,18 @@
 
 /*** VERSION DESKTOP ***/
 .article-host {
-    @include space-between-row;
-    width: 100%;
+    @include row;
     gap: 10px;
     margin-top: 10px;
+    justify-content: end;
     & .txt-host {
-        width: 180px;
+        width: 85px;
         color: $primary-color;
         font-size: $general;
         display: flex;
         align-items: center;
-        justify-content: end;
+        text-align: right;
+        margin-right: 5px;
     }
     & .img-host {
         width: 52px;
@@ -29,11 +30,9 @@
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
     .article-host {
-        width: 180px;
         margin-top: 5px;
         margin-bottom: 10px;
         & .txt-host {
-            width: 100px;
             font-size: $tertiary-mob;
         }
         & .img-host {
