@@ -8,7 +8,7 @@ export default Home
 
 function Home() {
    return (
-      <main>
+      <main className="main-home">
          <Banner imageUrl={Banner_Home} text={"Chez vous, partout et ailleurs"} content="falaise en bord de mer" />
          <Gallery />
       </main>

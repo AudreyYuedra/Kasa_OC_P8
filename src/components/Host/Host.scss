@@ -3,12 +3,12 @@
 
 
 /*** VERSION DESKTOP ***/
-article {
+.article-host {
     @include space-between-row;
     width: 100%;
     gap: 10px;
     margin-top: 10px;
-    & p {
+    & .txt-host {
         width: 180px;
         color: $primary-color;
         font-size: $general;
@@ -16,7 +16,7 @@ article {
         align-items: center;
         justify-content: end;
     }
-    & img {
+    & .img-host {
         width: 52px;
         height: 52px;
         border-radius: 50px;
@@ -28,15 +28,15 @@ article {
 
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
-    article {
+    .article-host {
         width: 180px;
         margin-top: 5px;
         margin-bottom: 10px;
-        & p {
+        & .txt-host {
             width: 100px;
             font-size: $tertiary-mob;
         }
-        & img {
+        & .img-host {
             width: 40px;
             height: 40px;
             margin-right: 10px;

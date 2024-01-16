@@ -1,24 +1,24 @@
 /*** VERSION DESKTOP ***/
-main {
-  width: 90%;
-  max-width: 1240px;
+.main-about {
+  background-color: palegreen;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main section {
+.main-about .section-about {
+  background-color: palevioletred;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  max-width: 1024px;
+  width: 86%;
 }
 
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
-  section {
-    margin-top: 15px;
+  .section-about {
+    width: 90%;
   }
 }/*# sourceMappingURL=About.css.map */

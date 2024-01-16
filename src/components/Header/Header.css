@@ -8,7 +8,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
 }
-header img {
+header .logo-color {
   width: 210px;
   height: 70px;
 }

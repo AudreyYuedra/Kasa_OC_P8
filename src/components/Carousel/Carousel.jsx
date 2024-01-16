@@ -24,12 +24,12 @@ function Carousel({ images }) {
    }
 
    return (
-      <figure>
+      <figure className="figure-carousel">
          {images.length > 1 && (
             <>
                <div className="container-arrows">
-                  <img src={Arrow_Left} alt="flèche gauche" className="arrow" onClick={goToPrevious} />
-                  <img src={Arrow_Right} alt="flèche droite" className="arrow" onClick={goToNext} />
+                  <img src={Arrow_Left} alt="flèche gauche" className="arrow-carousel" onClick={goToPrevious} />
+                  <img src={Arrow_Right} alt="flèche droite" className="arrow-carousel" onClick={goToNext} />
                </div>
             </>
          )}

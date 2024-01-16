@@ -14,18 +14,18 @@ function Collapse({ title, content }) {
    }
 
    return (
-      <article>
+      <article className="article-collapse">
          <div className="title-collapse" onClick={toggleCollapse}>
-            <p>{title}</p>
+            <span>{title}</span>
             <img
                src={Arrow_Collapse}
                alt="flèche ouvrante et fermante"
-               className={close ? "arrow-up" : "arrow-down"} // 1ère value => true ; 2nd value => false
+               className={`arrow ${close ? "arrow-up" : "arrow-down"}`} // 1ère value => true ; 2nd value => false
             />
          </div>
 
          <div className={close ? "txt-close" : "txt-open"}>
-            <p>{content}</p>
+            <p className="txt-collapse">{content}</p>
          </div>
       </article>
    )

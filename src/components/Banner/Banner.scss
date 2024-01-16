@@ -2,11 +2,12 @@
 @import "../../styles/_mixins.scss";
 
 /*** VERSION DESKTOP ***/
-figure {
+.figure-banner {
     width: 100%;
     max-width: 1240px;
     height: 224px;
     @include center;
+    margin-top: 15px;
     margin-bottom: 50px;
     & h1 {
         font-size: $banner;
@@ -14,7 +15,7 @@ figure {
         position: absolute;
         z-index: 2;
         }
-    & img {
+    & .img-banner {
         border-radius: $round;
         position: relative;
         height: 100%;
@@ -28,11 +29,14 @@ figure {
 
 
 /*** VERSION MOBILE ***/
-figure {
-    height: 112px;
-    margin-bottom: 10px;
-    & h1 {
-        font-size: $banner-mob;
-        text-align: center;
-        }
+@media (min-width: 320px) and (max-width: 767px) {
+    .figure-banner {
+        height: 120px;
+        width: 90%;
+        margin-bottom: 10px;
+        & h1 {
+            font-size: $banner-mob;
+            text-align: center;
+            }
+    }
 }

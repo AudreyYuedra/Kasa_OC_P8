@@ -1,20 +1,21 @@
 /*** VERSION DESKTOP ***/
-figure {
+.figure-banner {
   width: 100%;
   max-width: 1240px;
   height: 224px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 15px;
   margin-bottom: 50px;
 }
-figure h1 {
+.figure-banner h1 {
   font-size: 48px;
   text-align: center;
   position: absolute;
   z-index: 2;
 }
-figure img {
+.figure-banner .img-banner {
   border-radius: 25px;
   position: relative;
   height: 100%;
@@ -27,11 +28,14 @@ figure img {
 }
 
 /*** VERSION MOBILE ***/
-figure {
-  height: 112px;
-  margin-bottom: 10px;
-}
-figure h1 {
-  font-size: 24px;
-  text-align: center;
+@media (min-width: 320px) and (max-width: 767px) {
+  .figure-banner {
+    height: 120px;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .figure-banner h1 {
+    font-size: 24px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=Banner.css.map */

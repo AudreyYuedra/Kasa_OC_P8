@@ -4,11 +4,11 @@ export default Card
 
 function Card({ title, imgUrl }) {
    return (
-      <article>
+      <article className="article-card">
          <div className="content-card">
-            <p>{title}</p>
+            <p className="title-card">{title}</p>
             <div className="opacity-card"></div>
-            <img src={imgUrl} alt={`carte ${title}`} />
+            <img src={imgUrl} alt={`carte ${title}`} className="img-card" />
          </div>
       </article>
    )

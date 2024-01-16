@@ -1,5 +1,5 @@
 /*** VERSION DESKTOP ***/
-article {
+.article-host {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,7 +7,7 @@ article {
   gap: 10px;
   margin-top: 10px;
 }
-article p {
+.article-host .txt-host {
   width: 180px;
   color: #FF6060;
   font-size: 18px;
@@ -15,7 +15,7 @@ article p {
   align-items: center;
   justify-content: end;
 }
-article img {
+.article-host .img-host {
   width: 52px;
   height: 52px;
   border-radius: 50px;
@@ -26,16 +26,16 @@ article img {
 
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
-  article {
+  .article-host {
     width: 180px;
     margin-top: 5px;
     margin-bottom: 10px;
   }
-  article p {
+  .article-host .txt-host {
     width: 100px;
     font-size: 14px;
   }
-  article img {
+  .article-host .img-host {
     width: 40px;
     height: 40px;
     margin-right: 10px;

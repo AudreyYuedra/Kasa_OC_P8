@@ -1,5 +1,5 @@
 /*** VERSION DESKTOP ***/
-main {
+.main-home {
   width: 90%;
   max-width: 1240px;
   display: flex;
@@ -10,13 +10,13 @@ main {
 
 /*** VERSION TABLETTE ***/
 @media (min-width: 768px) and (max-width: 1024px) {
-  main {
+  .main-home {
     max-width: 824px;
   }
 }
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
-  main {
+  .main-home {
     max-width: 624px;
   }
 }/*# sourceMappingURL=Home.css.map */

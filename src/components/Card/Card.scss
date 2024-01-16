@@ -2,7 +2,7 @@
 @import "../../styles/_mixins.scss";
 
 /*** VERSION DESKTOP ***/
-article {
+.article-card {
     height: 340px;
     width: 30%;
     max-width: 340px;
@@ -16,7 +16,7 @@ article {
         height: 100%;
         display: flex;
         align-items: end;
-        & p {
+        & .title-card {
             font-size: $general;
             width: 94%;
             max-width: 340px;
@@ -32,10 +32,10 @@ article {
             height: 100%;
             border-bottom-left-radius: $round;
             border-bottom-right-radius: $round;
-            background: linear-gradient(to top, $bg-color-second, transparent);
+            background: linear-gradient(to top, $bg-color-second, $general-color, transparent);
             opacity: 0.4;
         }
-        & img {
+        & .img-card {
             width: 100%;
             height: 100%;
             border-radius: $round;
@@ -48,7 +48,7 @@ article {
 
 /*** VERSION TABLETTE ***/
 @media (min-width: 768px) and (max-width: 1024px) {
-    article {
+    .article-card {
         width: 45%;
         max-width: 320px;
         height: 320px;
@@ -59,7 +59,7 @@ article {
 
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
-    article {
+    .article-card {
         width: 320px;
         height: 320px;
     }

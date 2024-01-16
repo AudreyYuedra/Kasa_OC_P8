@@ -32,13 +32,13 @@ function Logement() {
    ))
 
    return (
-      <main>
+      <main className="main-logement">
          <Carousel images={jsonHousing.pictures} />
 
-         <section>
-            <article>
+         <section className="section-logement">
+            <article className="article-logement">
                <div className="infos">
-                  <h2>{jsonHousing.title}</h2>
+                  <h2 className="h2-logement">{jsonHousing.title}</h2>
                   <p className="location">{jsonHousing.location}</p>
 
                   <div className="container-tags">

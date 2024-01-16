@@ -1,12 +1,12 @@
 @import "../../styles/_variables.scss";
 @import "../../styles/_mixins.scss";
 
-main {
+.main-error {
     width: 90%;
     max-width: 1240px;
     @include column-center;
     color: $primary-color;
-    & span {
+    & .span-error {
         font-size: $error;
         margin: 35px 0;
     }
@@ -26,9 +26,9 @@ main {
 
 ////////// VERSION MOBIL //////////
 @media (min-width: 320px) and (max-width: 767px) {
-    main {
+    .main-error {
         max-width: 840px;
-        & span {
+        & .span-error {
             font-size: $error-mob;
             margin: 10px 0;
         }

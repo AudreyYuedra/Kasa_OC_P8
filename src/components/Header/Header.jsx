@@ -10,7 +10,7 @@ function Header() {
 
    return (
       <header>
-         <img src={logo_kasa_color} alt="Logo Kasa" />
+         <img src={logo_kasa_color} alt="Logo Kasa" className="logo-color" />
          <nav>
             <div className="nav-link">
                <Link to="/" className="links">

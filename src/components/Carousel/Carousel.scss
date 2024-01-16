@@ -3,7 +3,7 @@
 
 
 /*** VERSION DESKTOP ***/
-figure {
+.figure-carousel {
     @include column;
     max-width: 1240px;
     height: 415px;
@@ -16,7 +16,7 @@ figure {
         position: absolute;
         top: 300px;
         z-index: 1;
-        & .arrow {
+        & .arrow-carousel {
             width: 40px;
             height: 60px;
         }
@@ -45,7 +45,7 @@ figure {
 
 
 /*** VERSION DESKTOP ***/
-figure {
+.figure-carousel {
     max-width: 840px;
     height: 255px;
     & .container-arrows {
@@ -54,7 +54,7 @@ figure {
         padding: 0 5px;
         position: absolute;
         top: 200px;
-        & .arrow {
+        & .arrow-carousel {
             width: 25px;
             height: 45px;
         }

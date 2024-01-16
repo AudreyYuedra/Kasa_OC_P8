@@ -1,40 +1,40 @@
 /*** VERSION DESKTOP ***/
-main {
+.main-logement {
   width: 90%;
   max-width: 1240px;
   display: flex;
   flex-direction: column;
 }
-main section {
+.main-logement .section-logement {
   width: 100%;
   max-width: 1240px;
   display: flex;
   flex-direction: column;
 }
-main section article {
+.main-logement .section-logement .article-logement {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-main section article .infos {
+.main-logement .section-logement .article-logement .infos {
   display: flex;
   flex-direction: column;
 }
-main section article .infos h2 {
+.main-logement .section-logement .article-logement .infos .h2-logement {
   color: #FF6060;
   font-size: 36px;
   margin: 10px 0;
 }
-main section article .infos .location {
+.main-logement .section-logement .article-logement .infos .location {
   color: #FF6060;
   font-size: 18px;
   margin-bottom: 15px;
 }
-main section article .infos .container-tags {
+.main-logement .section-logement .article-logement .infos .container-tags {
   display: flex;
   flex-direction: row;
 }
-main section article aside {
+.main-logement .section-logement .article-logement aside {
   max-width: 250px;
   display: flex;
   flex-direction: column;
@@ -52,25 +52,25 @@ main section article aside {
 }
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
-  main {
+  .main-logement {
     max-width: 840px;
   }
-  main section {
+  .main-logement .section-logement {
     max-width: 840px;
   }
-  main section article {
+  .main-logement .section-logement .article-logement {
     display: flex;
     flex-direction: column;
   }
-  main section article .infos h2 {
+  .main-logement .section-logement .article-logement .infos .h2-logement {
     font-size: 18px;
     margin: 10px 0;
   }
-  main section article .infos .location {
+  .main-logement .section-logement .article-logement .infos .location {
     font-size: 14px;
     margin-bottom: 10px;
   }
-  main section article aside {
+  .main-logement .section-logement .article-logement aside {
     max-width: 840px;
     display: flex;
     flex-direction: row;

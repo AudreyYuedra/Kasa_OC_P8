@@ -3,7 +3,10 @@
 
 
 /*** VERSION DESKTOP ***/
-article {
+.article-collapse {
+    width: 90%;
+    height: auto;
+    max-width: 1024px;
     @include column;
     margin-bottom: 50px;
     & .title-collapse {
@@ -16,12 +19,13 @@ article {
         color: $general-color;
         background-color: $primary-color;
         cursor: pointer;
-        & img {
+        & .arrow {
             width: 35px;
             height: 20px;
         }
     }
-    & p {
+    & .txt-collapse {
+        width: 96%;
         font-size: $general;
         color: $primary-color;
         background-color: $bg-container;
@@ -57,7 +61,7 @@ article {
 
 /*** VERSION TABLETTE ***/
 @media (min-width: 768px) and (max-width: 1024px) {
-    article {
+    .article-collapse {
         width: 40%;
         max-width: 340px;
     }
@@ -65,19 +69,20 @@ article {
 
 
 /*** VERSION MOBILE ***/
-@media (min-width: 768px) and (max-width: 1024px) {
-    article {
+@media (min-width: 320px) and (max-width: 767px) {
+    .article-collapse {
+        width: 100%;
         @include column;
         margin-bottom: 30px;
-        & p {
+        & .title-collapse {
             height: 20px;
             font-size: $collapse;
-            & img {
+            & .arrow {
                 width: 20px;
                 height: 10px;
             }
         }
-        & p {
+        & .txt-collapse {
             font-size: $collapse;
             padding: 10px;
         }

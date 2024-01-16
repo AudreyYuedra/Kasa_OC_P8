@@ -1,12 +1,12 @@
 /*** VERSION DESKTOP ***/
-figure {
+.figure-carousel {
   display: flex;
   flex-direction: column;
   max-width: 1240px;
   height: 415px;
   border-radius: 25px;
 }
-figure .container-arrows {
+.figure-carousel .container-arrows {
   width: 84.5%;
   max-width: 1220px;
   padding: 0 10px;
@@ -17,15 +17,15 @@ figure .container-arrows {
   top: 300px;
   z-index: 1;
 }
-figure .container-arrows .arrow {
+.figure-carousel .container-arrows .arrow-carousel {
   width: 40px;
   height: 60px;
 }
-figure .slide {
+.figure-carousel .slide {
   width: 100%;
   height: 100%;
 }
-figure .slide figcaption {
+.figure-carousel .slide figcaption {
   font-size: 18px;
   text-align: center;
   align-self: end;
@@ -33,7 +33,7 @@ figure .slide figcaption {
   bottom: 30px;
   z-index: 1;
 }
-figure .slide .img-slide {
+.figure-carousel .slide .img-slide {
   width: 100%;
   max-width: 1240px;
   height: 100%;
@@ -44,21 +44,21 @@ figure .slide .img-slide {
 }
 
 /*** VERSION DESKTOP ***/
-figure {
+.figure-carousel {
   max-width: 840px;
   height: 255px;
 }
-figure .container-arrows {
+.figure-carousel .container-arrows {
   width: 88.4%;
   max-width: 840px;
   padding: 0 5px;
   position: absolute;
   top: 200px;
 }
-figure .container-arrows .arrow {
+.figure-carousel .container-arrows .arrow-carousel {
   width: 25px;
   height: 45px;
 }
-figure .slide figcaption {
+.figure-carousel .slide figcaption {
   font-size: 14px;
 }/*# sourceMappingURL=Carousel.css.map */
