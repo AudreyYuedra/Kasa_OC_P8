@@ -2,24 +2,7 @@
 @import "../../styles/_mixins.scss";
 
 
-/*** VERSION DESKTOP ***/
 .main-home {
-    width: 90%;
-    max-width: 1240px;
+    width: 100%;
     @include column-center;
-}
-
-
-/*** VERSION TABLETTE ***/
-@media (min-width: 768px) and (max-width: 1024px) {
-    .main-home {
-        max-width: 824px;
-    }
-}
-
-/*** VERSION MOBILE ***/
-@media (min-width: 320px) and (max-width: 767px) {
-    .main-home {
-        max-width: 624px;
-    }
 }

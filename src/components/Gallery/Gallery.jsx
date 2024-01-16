@@ -10,7 +10,7 @@ function Gallery() {
    return (
       <section className="section-gallery">
          {HousingDatas.map((data) => (
-            <Link key={data.id} to={`/Logement/${data.id}`}>
+            <Link key={data.id} to={`/Logement/${data.id}`} className="link-card">
                <Card imgUrl={data.cover} title={data.title} />
             </Link>
          ))}

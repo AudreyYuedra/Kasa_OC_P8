@@ -1,24 +1,22 @@
-/*** VERSION DESKTOP ***/
 .section-gallery {
+  background-color: #F6F6F6;
+  width: 90%;
   max-width: 1240px;
-  padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-
-/*** VERSION TABLETTE ***/
-@media (min-width: 768px) and (max-width: 1024px) {
-  .section-gallery {
-    max-width: 824px;
-    padding: 20px;
-  }
+.section-gallery .link-card {
+  height: 340px;
+  width: 340px;
+  margin: 15px;
 }
+
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
-  .section-gallery {
-    max-width: 624px;
-    padding: 10px;
+  .link-card {
+    width: 100%;
+    margin: 5px 0;
   }
 }/*# sourceMappingURL=Gallery.css.map */
