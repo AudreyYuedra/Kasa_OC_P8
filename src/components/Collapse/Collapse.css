@@ -1,6 +1,6 @@
 /*** VERSION DESKTOP ***/
 .article-collapse {
-  width: 90%;
+  width: 100%;
   height: auto;
   max-width: 1024px;
   display: flex;
@@ -25,7 +25,6 @@
   height: 20px;
 }
 .article-collapse .txt-collapse {
-  width: 96%;
   font-size: 18px;
   color: #FF6060;
   background-color: #FEFEFE;
@@ -60,17 +59,14 @@
 
 /*** VERSION TABLETTE ***/
 @media (min-width: 768px) and (max-width: 1024px) {
-  .article-collapse {
-    width: 40%;
-    max-width: 340px;
+  .arrow {
+    width: 25px;
+    height: 15px;
   }
 }
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
   .article-collapse {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     margin-bottom: 30px;
   }
   .article-collapse .title-collapse {

@@ -8,14 +8,19 @@
   align-items: center;
 }
 .main-about .section-about {
-  background-color: palevioletred;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 86%;
+  width: 90%;
 }
 
+/*** VERSION TABLETTE ***/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .section-about {
+    width: 85%;
+  }
+}
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
   .section-about {

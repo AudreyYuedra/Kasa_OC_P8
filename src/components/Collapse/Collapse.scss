@@ -4,7 +4,7 @@
 
 /*** VERSION DESKTOP ***/
 .article-collapse {
-    width: 90%;
+    width: 100%;
     height: auto;
     max-width: 1024px;
     @include column;
@@ -25,7 +25,8 @@
         }
     }
     & .txt-collapse {
-        width: 96%;
+        //width: 100%;
+        //max-width: 1024px;
         font-size: $general;
         color: $primary-color;
         background-color: $bg-container;
@@ -40,18 +41,15 @@
     transition: transform 0.3s ease-in-out;
     transform: rotate(0);
 }
-
 .arrow-down {
     transition: transform 0.3s ease-in-out;
     transform: rotate(-180deg);
 }
-
 .txt-open {
     visibility: visible;
     transform: scaleY(100%);
     transition: transform 0.3s ease-in-out;
 }
-
 .txt-close {
     visibility: collapse;
     transform: scaleY(0%);
@@ -61,9 +59,9 @@
 
 /*** VERSION TABLETTE ***/
 @media (min-width: 768px) and (max-width: 1024px) {
-    .article-collapse {
-        width: 40%;
-        max-width: 340px;
+    .arrow {
+        width: 25px;
+        height: 15px;
     }
 }
 
@@ -71,8 +69,6 @@
 /*** VERSION MOBILE ***/
 @media (min-width: 320px) and (max-width: 767px) {
     .article-collapse {
-        width: 100%;
-        @include column;
         margin-bottom: 30px;
         & .title-collapse {
             height: 20px;
