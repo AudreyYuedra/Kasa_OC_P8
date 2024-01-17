@@ -37,12 +37,8 @@
             }
         }
         & .container-collapse {
-            display: flex;
-            flex-wrap: wrap;
-            @include row;
-            & .collapse-logement {
-                width: 10%;
-            }
+            @include space-between-row;
+            gap: 10%;
         }
     }
 }
@@ -51,8 +47,7 @@
 /*** VERSION TABLETTE ***/
 @media (min-width: 768px) and (max-width: 1024px) {
     .container-collapse {
-        max-width: 824px;
-        @include space-between-row;
+        align-content: center;
     }
 }
 
@@ -82,12 +77,9 @@
                     justify-content: space-between;
                 }
             }
+            & .container-collapse {
+                @include column;
+            }
         }
-    }
-
-    .container-collapse {
-        max-width: 1240px;
-        @include column;
-        @include center;
     }
 }
