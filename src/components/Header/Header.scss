@@ -4,7 +4,6 @@
 
 /*** VERSION DESKTOP ***/
 header {
-    background-color: aqua;
     width: 90%;
     max-width: 1240px;
     height: 70px;
@@ -47,9 +46,10 @@ header {
     header {
         height: 46px;
         margin: 20px 0;
+        gap: 10%;
         & .logo-color {
-            width: 145px;
-            height: 46px;
+            width: 140px;
+            height: 40px;
         }
         & nav {
             width: 180px;
