@@ -25,7 +25,7 @@ function Collapse({ title, content }) {
          </div>
 
          <div className={close ? "txt-close" : "txt-open"}>
-            <p className="txt-collapse">{content}</p>
+            <span className="txt-collapse">{content}</span>
          </div>
       </article>
    )
