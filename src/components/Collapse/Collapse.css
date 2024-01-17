@@ -47,14 +47,16 @@
 
 .txt-open {
   visibility: visible;
+  transform-origin: top;
   transform: scaleY(100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .txt-close {
   visibility: collapse;
+  transform-origin: top;
   transform: scaleY(0%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 /*** VERSION TABLETTE ***/
