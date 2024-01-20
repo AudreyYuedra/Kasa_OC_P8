@@ -14,8 +14,11 @@
 }
 
 /*** VERSION MOBILE ***/
-@media (min-width: 320px) and (max-width: 767px) {
-  .link-card {
+@media (min-width: 320px) and (max-width: 822px) {
+  .section-gallery {
+    background-color: none;
+  }
+  .section-gallery .link-card {
     width: 100%;
     margin: 5px 0;
   }
